@@ -1,0 +1,69 @@
+Parallel ETI Mining Implementation
+
+Compiling
+=========
+
+	The program uses MPI, and is provided with a makefile. It is
+possible that you need to change the line in the makefile to point to
+the correct MPI-enabled C++ compiler.
+
+	To compile the sequential version, remove the #define USE_MPI
+line in DataSet.h, and modify the makefile to point to the standard
+C++ compiler.
+
+Running
+=======
+
+	For the non-MPI version, invoke the program as:
+
+		eti <dataset> support epsilon hconf
+
+	The dataset should be a text file, with each line representing
+a transaction, and items should be numbered started at 1, and
+seperated by spaces. The number of transactions is determined
+automatically. For example:
+
+	1 4 9 11 28 30 39 42 45 50 
+	8 11 12 18 21 23 26 32 33 37 48 
+	1 4 11 14 25 28 46 
+	17 26 32 
+	2 11 14 16 28 41 48 
+	23 27 39 
+	29 36 40 43 45 
+	2 4 22 29 30 31 33 44 45
+
+	The support value is *not* a percent, it is the actual number
+of transactions desired for a pattern.
+
+	The value epsilon is the fraction error allowed in the block
+(so the value should be in the range [0,1])
+
+	The value hconf is the minimum value of h-confidence required,
+also in the range [0,1]
+
+	To run the MPI version, invoke the command using mpirun:
+
+		mpirun -np 4 eti dataset support epsilon hconf
+
+	There is an important change to the dataset: it must be split
+beforehand into the same number of files as the number of processors
+you are running the program on. So if you dataset originally was
+called thedata, and running on 4 processors, you would have the files:
+
+		thedata_0
+		thedata_1
+		thedata_2
+		thedata_3
+		
+	each with unique transactions.
+
+	Or, you can used the supplied runeti.py script which will
+automatically split the file and run the code.  The script is invoked
+as follows:
+
+		runeti.py numberOfProcessors datafilename support epsilon hconf
+
+Output
+======
+	The program outputs the itemsets, one per line, to standard
+out.

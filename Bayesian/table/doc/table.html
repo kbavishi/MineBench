@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- ===================================================================
+  File    : table.html
+  Contents: Description of table utility programs
+  Author  : Christian Borgelt
+==================================================================== -->
+<html>
+<head>
+<title>Table Utility Programs</title>
+</head>
+
+<!-- =============================================================== -->
+
+<body bgcolor=white>
+<h1><a name="top">Table Utility Programs</h1>
+<h3>(A Brief Documentation of the Programs
+     dom / tmerge / tsplit / opc / xmat)</a></h3>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3>Contents</h3>
+<ul type=disc>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#domains">Determining Attribute Domains</a></li>
+<li><a href="#tmerge">Merge Tables</a></li>
+<li><a href="#tsplit">Split a Table</a></li>
+<li><a href="#opc">Computing One Point Coverages</a></li>
+<li><a href="#xmat">Computing a Confusion Matrix</a></li>
+<li><a href="#copying">Copying</a></li>
+<li><a href="#download">Download</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="intro">Introduction</a></h3>
+
+<p>I am sorry that there is no detailed documentation yet. Below you
+can find a brief explanation of how to grow a decision tree with the
+program <tt>dti</tt>, how to prune a decision tree with the program
+<tt>dtp</tt>, how to execute a decision tree with the program
+<tt>dtx</tt>, and how to extract rules from a decision tree with the
+program <tt>dtr</tt>. For a list of options, call the programs without
+any arguments.</p>
+
+<p>Enjoy,<br>
+<a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/">
+Christian Borgelt</a></p>
+
+<p>As a simple example for the explanations below I use the dataset
+in the file <tt>table/ex/drug.tab</tt>, which lists 12 records of
+patient data (sex, age, and blood pressure) together with an effective
+drug (effective w.r.t. some unspecified disease). The contents of this
+file is:</p>
+
+<pre>   Sex    Age Blood_pressure Drug
+   male   20  normal         A
+   female 73  normal         B
+   female 37  high           A
+   male   33  low            B
+   female 48  high           A
+   male   29  normal         A
+   female 52  normal         B
+   male   42  low            B
+   male   61  normal         B
+   female 30  normal         A
+   female 26  low            B
+   male   54  high           A
+</pre>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="domains">Determining Attribute Domains</a></h3>
+
+<p>The domains of the columns of th table <tt>drug.tab</tt>can be
+determined with the program <tt>dom</tt>
+
+<pre>  dom -a drug.tab drug.dom</pre>
+
+<p>The program <tt>dom</tt> assumes that the first line of the table
+file contains the column names. (This is the case for the example file
+<tt>drug.tab</tt>.) If you have a table file without column names, you
+can let the program read the column names from another file (using the
+<tt>-h</tt> option) or you can let the program generate default names
+(using the <tt>-d</tt> option), which are simply the column numbers.
+The <tt>-a</tt> option tells the program to determine automatically
+the column data types. Thus the values of the <tt>Age</tt> column are
+automatically recognized as integer values.</p>
+
+<p>After <tt>dom</tt> has finished, the contents of the file
+<tt>drug.dom</tt> should look like this:</p>
+
+<pre>  dom(Sex) = { male, female };
+  dom(Age) = ZZ;
+  dom(Blood_pressure) = { normal, high, low };
+  dom(Drug) = { A, B };
+</pre>
+
+<p>The special domain <tt>ZZ</tt> represents the set of integer numbers,
+the special domain <tt>IR</tt> (not used here) the set of real numbers.
+(The double <tt>Z</tt> and the <tt>I</tt> in front of the <tt>R</tt>
+are intended to mimic the bold face or double stroke font used in
+mathematics to write the set of integer or the set of real numbers.
+All programs that need to read a domain description also recognize
+a single <tt>Z</tt> or a single <tt>R</tt>.)</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="tmerge">Merge Tables</a></h3>
+
+<p>The program <tt>tmerge</tt> can be used to merge two tables and
+to project a table to a subset of its columns. The latter consists
+simply in merging a table to another which contains less columns.
+I only demonstrate the projection by merging the table in the file
+<tt>drug.tab</tt> to the empty table in the file <tt>drug.hdr</tt>:</p>
+
+<pre>  tmerge -a drug.hdr drug.tab drug.prj</pre>
+
+<p>This command removes the <tt>Age</tt> column from the table
+<tt>drug.tab</tt> (since this column is missing in the file
+<tt>drug.hdr</tt>) and writes the result to the file <tt>drug.prj</tt>.
+After the program <tt>tmerge</tt> has finished, the contents of the
+file <tt>drug.prj</tt> should be:</p>
+
+<pre>  Sex    Blood_pressure Drug
+  male   normal         A
+  female normal         B
+  female high           A
+  male   low            B
+  female high           A
+  male   normal         A
+  female normal         B
+  male   low            B
+  male   normal         B
+  female normal         A
+  female low            B
+  male   high           A
+</pre>
+
+<p>Since the option <tt>-a</tt> is given, the columns of the output
+file are aligned. If the file <tt>drug.hdr</tt> contained tuples,
+these tuples would precede the tuples from the file <tt>drug.tab</tt>
+in the output file <tt>drug.prj</tt>.</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="tsplit">Split a Table</a></h3>
+
+<p>If you are interested in the sets of patients with low, normal, or
+high blood pressure, you can split the table into subtables, each of
+which contains only tuples with a specific value for the column
+<tt>Blood_pressure</tt>, with</p>
+
+<pre>  tsplit -a -c Blood_pressure drug.tab</pre>
+
+<p>This should result in three files - <tt>0.tab</tt>, <tt>1.tab</tt>
+and <tt>2.tab</tt> - with the following contents:</p>
+
+<pre>  0.tab:   Sex    Age Blood_pressure Drug
+           male   20  normal         A
+           female 73  normal         B
+           male   29  normal         A
+           female 52  normal         B
+           male   61  normal         B
+           female 30  normal         A
+
+  1.tab:   Sex    Age Blood_pressure Drug
+           female 37  high           A
+           female 48  high           A
+           male   54  high           A
+
+  2.tab:   Sex    Age Blood_pressure Drug
+           male   33  low            B
+           male   42  low            B
+           female 26  low            B
+</pre>
+
+<p>That is, the file <tt>0.tab</tt> contains all patients with normal
+blood pressure, the file <tt>1.tab</tt> all patients with high blood
+pressure, and the file <tt>2.tab</tt> all patients with low blood
+pressure. The tables are aligned since the option <tt>-a</tt> was
+given. With the <tt>-c</tt> option the column is specified on which
+the split is based. Similarly, the table can be split in such a way
+that the relative frequencies of the values are maintained (stratified
+split). For example, calling the program <tt>tsplit</tt> with</p>
+
+<pre>  tsplit -a -t3 -c Blood_pressure drug.tab</pre>
+
+<p>should result in three files (3 because of the <tt>-t3</tt> option)
+- <tt>0.tab</tt>, <tt>1.tab</tt> and <tt>2.tab</tt> - with the
+following contents:</p>
+
+<pre>  0.tab:   Sex    Age Blood_pressure Drug
+           male   20  normal         A
+           female 52  normal         B
+           female 37  high           A
+           male   33  low            B
+
+  1.tab:   Sex    Age Blood_pressure Drug
+           female 73  normal         B
+           male   61  normal         B
+           female 48  high           A
+           male   42  low            B
+
+  2.tab:   Sex    Age Blood_pressure Drug
+           male   29  normal         A
+           female 30  normal         A
+           male   54  high           A
+           female 26  low            B
+</pre>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="opc">Computing One Point Coverages</a></h3>
+
+<p>The program <tt>opc</tt> can be used to reduce a table. This does
+not change anything for the original table, but simplifies the table
+that resulted from the application of the program <tt>tmerge</tt> shown
+above. This table can be reduced by calling the program <tt>opc</tt>
+with</p>
+
+<pre>  opc -a drug.prj drug.red</pre>
+
+<p>After the program <tt>opc</tt> has finished, the contents of the
+file <tt>drug.red</tt> should read like this:</p>
+
+<pre>  Sex    Blood_pressure Drug #
+  male   normal         A    2
+  male   normal         B    1
+  male   high           A    1
+  male   low            B    2
+  female normal         A    1
+  female normal         B    2
+  female high           A    2
+  female low            B    1
+</pre>
+
+<p>The number in the last column indicates the number of occurences
+of the corresponding tuple (table row) in the original table.</p>
+
+<p>The <tt>opc</tt> program can also be used to compute one point
+coverages, either in a fully expanded or in a compressed form. One point
+coverages are considered in possibility theory and computing them is
+important for inducing possibilistic network from data. However,
+explaining this in detail would lead too far.</tt>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="xmat">Computing a Confusion Matrix</a></h3>
+
+<p>The program <tt>xmat</tt> can be used to evaluate a classification
+result. It reads a table file and computes a confusion matrix from two
+columns of this table. It uses the last two columns by default (the
+last column for the x- and the semi-last for the y-direction). Other
+columns can be selected via the options <tt>-x</tt> and <tt>-y</tt>
+followed by the name of the columns that are to be used for the x- or
+y-direction of the confusion matrix. To demonstrate this program we
+use the file <tt>drug.cls</tt>, which contains simply the data from
+the file <tt>drug.tab</tt> with an additional classification column:</p>
+
+<pre>  Sex    Age Blood_pressure Drug Class
+  male   20  normal         A    B
+  female 73  normal         B    B
+  female 37  high           A    A
+  male   33  low            B    B
+  female 48  high           A    B
+  male   29  normal         A    A
+  female 52  normal         B    B
+  male   42  low            B    A
+  male   61  normal         B    B
+  female 30  normal         A    A
+  female 26  low            B    B
+  male   54  high           A    A
+</pre>
+
+<p>To determine a confusion matrix for this table, simply call the
+program <tt>xmat</tt> with</p>
+
+<pre>  xmat drug.cls</pre>
+
+<p>The output, which by default is written to the terminal, should
+read like this:</p>
+
+<pre>  confusion matrix for Drug vs. Class:
+   no | value  |      1      2 | errors
+  ----+--------+---------------+-------
+    1 | A      |      4      2 |      2
+    2 | B      |      1      5 |      1
+  ----+--------+---------------+-------
+      | errors |      1      2 |      3
+</pre>
+
+<p>In this matrix the x-direction corresponds to the column
+<tt>Class</tt> and the y-direction to the column <tt>Drug</tt>.
+As you can see, for drug A the classification is wrong in two cases
+(first line, second column of the matrix), for drug B it is wrong
+in one case (second line, first column). Overall there are three
+errors.</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="copying">Copying</a></h3>
+
+<p>dti/dtp/dtx/dtr/rsx -
+   induce, prune, and execute decision and regression trees<br>
+   copyright &copy; 1996-2003 Christian Borgelt</p>
+
+<p>These programs are free software; you can redistribute them
+and/or modify them under the terms of the
+<a href="http://www.fsf.org/copyleft/lesser.html">
+GNU Lesser (Library) General Public License</a> as published by the
+<a href="http://www.fsf.org">Free Software Foundation</a>.</p>
+
+<p>These programs are distributed in the hope that they will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+<a href="http://www.fsf.org/copyleft/lesser.html">
+GNU Lesser (Library) General Public License</a> for more details.</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="download">Download</a></h3>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td valign=top><b>Sources:</b></td><td></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/table.tar.gz">
+    table.tar.gz</a> (125 kb)
+    <a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/table.zip">
+    table.zip</a> (162 kb)
+    (package version 2.12, 2003.01.30)</td></tr>
+<tr><td valign=top><b>Unix:</b></td><td width=10></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/lnxtable.zip">
+    lnxtable.zip</a>
+    (Linux executables, 206 kb)</td></tr>
+<tr><td valign=top><b>Windows:</b></td><td></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/wintable.zip">
+    wintable.zip</a>
+    (Windows console executables, 265 kb)</li>
+</table>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="contact">Contact</a></h3>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td valign=top>Snail mail:</td><td width=10></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/index.html">
+        Christian Borgelt</a><br>
+        <a href="http://fuzzy.cs.uni-magdeburg.de/index.html">
+        Working Group Neural Networks and Fuzzy Systems</a><br>
+        <a href="http://www-iws.cs.uni-magdeburg.de/iws.html"> 
+        Department of Knowledge Processing and Language Engineering</a><br>
+        <a href="http://www.cs.uni-magdeburg.de/">
+        School of Computer Science</a><br>
+        <a href="http://www.uni-magdeburg.de/">
+        Otto-von-Guericke-University of Magdeburg</a><br>
+        Universit&auml;tsplatz 2<br>
+        D-39106 Magdeburg<br>
+        Germany</td></tr>
+<tr><td valign=top>E-mail:</td><td></td>
+    <td><a href="mailto:christian.borgelt@cs.uni-magdeburg.de">
+        christian.borgelt@cs.uni-magdeburg.de</a><br>
+        <a href="mailto:borgelt@iws.cs.uni-magdeburg.de">
+        borgelt@iws.cs.uni-magdeburg.de</a></td></tr>
+<tr><td>Phone:</td><td></td>
+    <td>+49 391 67 12700</td></tr>
+<tr><td>Fax:</td><td></td>
+    <td>+49 391 67 12018</td></tr>
+<tr><td>Office:</td><td></td>
+    <td>29.015</td></tr>
+</table>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<address>&copy; 1999-2003
+<a href="mailto:borgelt@iws.cs.uni-magdeburg.de">Christian Borgelt</a>
+</address>
+<!-- Created: Thu May 24 12:28:05 CEST 2001 -->
+<!-- hhmts start -->
+Last modified: Tue Mar 11 17:31:07 CET 2003
+<!-- hhmts end -->
+</body>
+</html>

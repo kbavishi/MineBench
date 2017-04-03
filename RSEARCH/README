@@ -1,0 +1,9 @@
+To build MPI version, run command:
+  ./configure LIBS=-lm
+
+To build OpenMP version, run command:
+  ./configure CFLAGS=-fopenmp LIBS=-lm
+
+  * Note that change CFLAGS for the righ OpenMP flag for your C compiler.
+    For example, if you are using Intel icc, then change CFLAGS to -openmp.
+

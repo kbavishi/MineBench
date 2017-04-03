@@ -1,0 +1,5 @@
+./utility_mine ../Data/real_data_aa_binary ../Data/product_price_binary 0.01
+./utility_mine ../Data/real_data_aa_binary ../Data/product_price_binary 0.0075
+./utility_mine ../Data/real_data_aa_binary ../Data/product_price_binary 0.005
+./utility_mine ../Data/real_data_aa_binary ../Data/product_price_binary 0.0025
+./utility_mine ../Data/real_data_aa_binary ../Data/product_price_binary 0.001

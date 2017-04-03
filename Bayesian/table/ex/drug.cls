@@ -1,0 +1,13 @@
+Sex    Age Blood_pressure Drug Class
+male   20  normal         A    B
+female 73  normal         B    B
+female 37  high           A    A
+male   33  low            B    B
+female 48  high           A    B
+male   29  normal         A    A
+female 52  normal         B    B
+male   42  low            B    A
+male   61  normal         B    B
+female 30  normal         A    A
+female 26  low            B    B
+male   54  high           A    A

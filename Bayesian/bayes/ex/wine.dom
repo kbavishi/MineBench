@@ -1,0 +1,17 @@
+/*----------------------------------------------------------------------
+  domains
+----------------------------------------------------------------------*/
+dom(att01) = IR;
+dom(att02) = IR;
+dom(att03) = IR;
+dom(att04) = IR;
+dom(att05) = ZZ;
+dom(att06) = IR;
+dom(att07) = IR;
+dom(att08) = IR;
+dom(att09) = IR;
+dom(att10) = IR;
+dom(att11) = IR;
+dom(att12) = IR;
+dom(att13) = ZZ;
+dom(class) = { A, B, C };

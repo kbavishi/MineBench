@@ -1,0 +1,25 @@
+# $Id: rate4site.ggo,v 1.1 2006-07-05 13:49:44 ninio Exp $
+purpose "generate random numbers drawn from a Gamma distribution"
+package "rate3site"
+version "1.0 $Revision: 1.1 $"
+
+
+option "treefile" 		             t	""	string             	default=""				 no
+option "seqfile" 			 		 s	""	string 				default="-" 			 no
+option "logFile" 			 		 l	"" 	string 				default="-" 			 no 
+option "referenceSeq" 		 		 R	"" 	string 				default="" 				 no
+option "logValue" 			 		 v	""  int 				default="3" 			 no
+option "outFile" 			 		 o	"" 	string 				default="" 				 no
+option "outFileNotNormalize" 		 O	"" 	string 				default="" 				 no
+option "treeOutFile" 		 		 T 	"" 	string 				default="" 				 no
+option "spPositionFile"		 		 p 	""  string 				default="" 				 no
+option "manyTreeFileInput" 			 M 	"" 	string 				default="" 				 no
+option "treePositionFile" 	 		 P 	"" 	string 				default="" 				 no
+option "modelName" 			 		 - 	"" 	string 				default="jtt" 			 no
+option "treeSearchAlg" 		 		 a 	"" 	string 				default="njML" 			 no
+option "alphabet_size" 		 		 z 	"" 	int 				default="20" 			 no 
+option "optimizeBranchLengths" 		 b 	"" 	string 				default="mlAndAlphaBBL"  no
+option "rateEstimationMethod" 		 -  "" 	string 				default="ebExp" 		 no
+option "numberOfDiscreteCategories"  C 	"" 	int              	default="16" 			 no
+option "userInputAlpha" 			 A 	"" 	int              	default="0" 			 no
+option "fileListingManySubstitutionMatrices" - "" string  			default="" 				 no

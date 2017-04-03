@@ -1,0 +1,30 @@
+# STOCKHOLM 1.0
+
+#=GS E.coli DE E.coli RNaseP from RNaseP database
+
+E.coli               GAAGCUGACCAGACAGUCGCCGCUUCGUCGUCGUCCUCUUCGGGGGAGAC
+#=GR E.coli       SS >>>>>>>>>>>>>>>>>>.>>.>>>>>>>>>>.>>>>>....<<<<<<<<
+
+E.coli               GGGCGGAGGGGAGGAAAGUCCGGGCUCCAUAGGGCAGGGUGCCAGGUAAC
+#=GR E.coli       SS <.<<<<<<.<<....AAA.AAAAA>>>>...AAAA.>>>>>>>>>>....
+
+E.coli               GCCUGGGGGGGAAACCCACGACCAGUGCAACAGAGAGCAAACCGCCGAUG
+#=GR E.coli       SS .<<<<<>>>>....<<<.<>>...>>>>.............>>>>>..>>
+
+E.coli               GCCCGCGCAAGCGGGAUCAGGUAAGGGUGAAAGGGUGCGGUAAGAGCGCA
+#=GR E.coli       SS >>>>>>....<<<<<.<<<<<<..<<.......>>>>>>.......<<<<
+
+E.coli               CCGCGCGGCUGGUAACAGUCCGUGGCACGGUAAACUCCACCCGGAGCAAG
+#=GR E.coli       SS <<>>>>>>>>>....<<<.<<<<<.<...<<..<<<<<<<<<<<<<...>
+
+E.coli               GCCAAAUAGGGGUUCAUAAGGUACGGCCCGUACUGAACCCGGGUAGGCUG
+#=GR E.coli       SS >>>......>>>>>>....>>>>>.aaaa<<<<<<<<<<<.....<<<<.
+
+E.coli               CUUGAGCCAGUGAGCGAUUGCUGGCCUAGAUGAAUGACUGUCCACGACAG
+#=GR E.coli       SS .....>>>>>>>>....<<<<<<<<..........<<<<<<<........
+
+E.coli               AACCCGGCUUAUCGGUCAGUUUCACCU
+#=GR E.coli       SS ..aaaaaaaa.<.<<<<<<<<<<....
+
+
+//

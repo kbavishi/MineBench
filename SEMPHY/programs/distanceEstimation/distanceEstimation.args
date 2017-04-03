@@ -1,0 +1,27 @@
+# $Id: distanceEstimation.args,v 1.8 2005-12-13 07:44:19 eyalprivman Exp $ this looks better as -*- csh -*-
+
+package "distanceEstimation"
+purpose "Estimate distances between pairs of sequances"
+version "0.9"
+
+
+option  "pairListFilename"	P    "file name for list of files, each containing a pair of sequances"	string  typestr="FILENAME"	yes
+option  "ratesFilename"		R    "file name for list of files, each containing the rates of the corresponding sequence file"	string  typestr="FILENAME"	no
+
+section "Distance estimation methods to run"
+
+section "pairwise distance estimation methods"
+#defgroup "Methods"  groupdesc="Method type"
+option  "pD"		-	"p-Distance"					flag off 
+option  "jc"		-	"Jukes and Kantor distance"			flag off 
+option  "homogeneousDist"	-	"homogeneous ML distance"			flag off 
+option  "pairwiseGamma"	-	"Gamma-ASRV with alpha optimized for each pair"	flag off 
+option  "allPairwise"	-	"use all distance estimation methods that do not utilize side information"		flag off
+
+section "Distance estimation methods that utilize side information"
+option  "asrvExactGamma"		-	"Exact Gamma-ASRV, given alpha (must give alpha parameter)"	flag off 
+option  "asrvGivenAlpha"	-	"Gamma-ASRV, given alpha (must give alpha parameter)"	flag off 
+option  "asrvGivenRates"	-	"ASRV, given the rates (must give ratesFilename parameter)"	flag off
+option  "posterior"	-	"Gamma-ASRV with posterior probs based on given tree and tree sequences"		flag off
+option  "all"		-	"use all distance estimation methods"				flag off
+

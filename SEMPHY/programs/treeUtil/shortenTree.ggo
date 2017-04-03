@@ -1,0 +1,16 @@
+# $Id: shortenTree.ggo,v 1.1 2006-07-05 13:54:13 ninio Exp $ this looks better as -*- csh -*-
+
+package "shortenTree"
+version "1.00"
+purpose "take a tree and change the branch lengths so they fall within a range"
+
+option  "tree"        t    "Tree file name" 				string	typestr="FILENAME" default="-"			no
+option  "outputTree"  o    "Output file for tree"       	string 	typestr="FILENAME" default="-"			no
+
+option	"min"		  m	 "minimal alowed branch length" float  no
+option	"max"		  x	 "maximal alowed branch length" float  no
+
+section "Log Options"
+
+option  "verbose"  		v    "Log report level (verbose)"		int    	default="1"		hidden	no
+option  "Logfile"		l    "Log output file name"			string 	typestr="FILENAME" default="-"		hidden	no

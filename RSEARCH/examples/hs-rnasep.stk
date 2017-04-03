@@ -1,0 +1,27 @@
+# STOCKHOLM 1.0
+
+#=GS H.sapiens DE H.sapiens RNaseP from RNaseP database
+
+H.sapiens            AUAGGGCGGAGGGAAGCUCAUCAGUGGGGCCACGAGCUGAGUGCGUCCUG
+#=GR H.sapiens    SS >>.>>>>>>>>>>...>>>>.....>>>>.........>>>>>.......
+
+H.sapiens            UCACUCCACUCCCAUGUCCCUUGGGAAGGUCUGAGACUAGGGCCAGAGGC
+#=GR H.sapiens    SS .<<<<<...........<<<<...................>>>>......
+
+H.sapiens            GGCCCUAACAGGGCUCUCCCUGAGCUUCGGGGAGGUGAGUUCCCAGAGAA
+#=GR H.sapiens    SS >>>>>.....<<<<<>>>>>>>.....<<<<<<<>>>>>>>.........
+
+H.sapiens            CGGGGCUCCGCGCGAGGUCAGACUGGGCAGGAGAUGCCGUGGACCCCGCC
+#=GR H.sapiens    SS ....>>>...........................................
+
+H.sapiens            CUUCGGGGAGGGGCCCGGCGGAUGCCUCCUUUGCCGGAGCUUGGAACAGA
+#=GR H.sapiens    SS .....................................<<<........<<
+
+H.sapiens            CUCACGGCCAGCGAAGUGAGUUCAAUGGCUGAGGUGAGGUACCCCGCAGG
+#=GR H.sapiens    SS <<<<<<<<<....................<<<<>>>>>>>.>>>>...<<
+
+H.sapiens            GGACCUCAUAACCCAAUUCAGACCACUCUCCUCCGCCCAUU
+#=GR H.sapiens    SS <<<<<<<<<...................<<<<<<<<<<<<.
+
+
+//

@@ -1,0 +1,24 @@
+rate4site.o rate4site.debug.o: rate4site.cpp rate4site.h ../../lib/definitions.h \
+ ../../lib/doubleRep.h ../../lib/definitions.h rate4siteOptions.h \
+ ../../lib/alphabet.h ../../lib/sequenceContainer.h ../../lib/sequence.h \
+ ../../lib/errorMsg.h ../../lib/alphabet.h ../../lib/stochasticProcess.h \
+ ../../lib/pijAccelerator.h ../../lib/replacementModel.h \
+ ../../lib/distribution.h ../../lib/tree.h ../../lib/readTree.h \
+ ../../lib/logFile.h ../../lib/errorMsg.h ../../lib/nucleotide.h \
+ ../../lib/amino.h ../../lib/geneticCodeHolder.h ../../lib/codon.h \
+ ../../lib/uniDistribution.h ../../lib/gammaDistribution.h \
+ ../../lib/readDatMatrix.h ../../lib/datMatrixHolder.h \
+ ../../lib/chebyshevAccelerator.h ../../lib/nucJC.h ../../lib/aaJC.h \
+ ../../lib/trivialAccelerator.h ../../lib/jcDistance.h \
+ ../../lib/distanceMethod.h ../../lib/distanceTable.h \
+ ../../lib/sequenceContainer.h ../../lib/nj.h ../../lib/tree.h \
+ ../../lib/njConstrain.h ../../lib/distances2Tree.h ../../lib/numRec.h \
+ ../../lib/checkcovFanctors.h ../../lib/likelihoodComputation.h \
+ ../../lib/computePijComponent.h ../../lib/stochasticProcess.h \
+ ../../lib/suffStatComponent.h ../../lib/someUtil.h ../../lib/likeDist.h \
+ ../../lib/countTableComponent.h ../../lib/jcDistance.h \
+ ../../lib/fastStartTree.h ../../lib/checkcovFanctorsWithFactors.h \
+ ../../lib/likelihoodComputationFactors.h ../../lib/bblEM.h \
+ ../../lib/bestAlpha.h ../../lib/gammaDistribution.h \
+ ../../lib/siteSpecificRate.h ../../lib/likelihoodComputation.h \
+ ../../lib/recognizeFormat.h

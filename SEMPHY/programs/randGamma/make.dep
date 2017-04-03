@@ -1,0 +1,10 @@
+randGamma.o randGamma.debug.o: randGamma.cpp ../../lib/definitions.h ../../lib/doubleRep.h \
+ ../../lib/definitions.h randGamma_cmdline.h ../../lib/logFile.h \
+ ../../lib/talRandom.h ../../lib/logFile.h ../../lib/readDatMatrix.h \
+ ../../lib/datMatrixHolder.h ../../lib/replacementModel.h \
+ ../../lib/errorMsg.h ../../lib/datMatrixHolder.h \
+ ../../lib/likelihoodComputation.h ../../lib/computePijComponent.h \
+ ../../lib/tree.h ../../lib/readTree.h ../../lib/stochasticProcess.h \
+ ../../lib/pijAccelerator.h ../../lib/distribution.h \
+ ../../lib/sequenceContainer.h ../../lib/sequence.h ../../lib/alphabet.h \
+ ../../lib/suffStatComponent.h

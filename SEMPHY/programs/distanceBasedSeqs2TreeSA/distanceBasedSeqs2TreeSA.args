@@ -1,0 +1,32 @@
+# $Id: distanceBasedSeqs2TreeSA.args,v 1.9 2006-03-20 11:26:52 eyalprivman Exp $ this looks better as -*- csh -*-
+
+package "Distance-based phylogeny reconstrustion"
+purpose "Distance-based phylogeny reconstrustion with any distance measure and any tree reconstruction method. May be executed iteratively while optimizing some side information about the tree\nComments:\n1. Iterative methods can be given an initial starting tree that is given in the --tree parameter. If --alpha is given than the fixed tree topology and branch lengths will be used for the calculation of the side information for the first iteration. Else, the first iteration will start with optimization of the branch lengths and the side information for the given topology.\n2. Bootstrapping may be done for a tree that is given in the --tree parameter. This will automatically turn on the --bootstrapOnly flag. Alpha must also be given for iterative methods that use gamma-ASRV."
+version "0.9"
+
+
+section "Pairwise distance estimation methods"
+defgroup "Methods"  groupdesc="pairwise distance estimation method"
+groupoption  "pD"		-	"p-Distance"					group="Methods" 
+groupoption  "jc"		-	"Jukes and Kantor distance"			group="Methods" 
+groupoption  "homogeneousRates"	-	"homogeneous rates MLE distance"		group="Methods" 
+groupoption  "pairwiseGamma"	-	"Gamma-ASRV with alpha optimized for each pair. (must give either --alpha or --optimizeAlpha)"	group="Methods" 
+#groupoption  "asrvExactGamma" -	"Exact Gamma-ASRV, given alpha (must give alpha parameter)"	group="Methods" 
+
+section "Iterative distance-based tree reconstruction, with distance estimation methods that utilize side information from the tree of the previous iteration"
+groupoption  "commonAlpha"	-	"Iterative tree reconstruction; the side information being the alpha parameter. (must use --optimizeAlpha; may give an initial alpha value in --alpha)"		       group="Methods" 
+groupoption  "rate4site"	-	"Iterative tree reconstruction; the side information being the ML rate for each site"	       group="Methods"
+groupoption  "posterior"	-	"Iterative tree reconstruction; the side information being the posterior probabilities of the rates at each site. (must use --optimizeAlpha; may give an initial alpha value in --alpha)"	group="Methods"
+
+
+
+
+#option  "ratesFilename"		R	"Name of file containing the rates of the corresponding sequence file"	string  typestr="FILENAME"	no
+option  "bootstrap"			b	"Do a given number of bootstrap iterations. To bootstrap a known tree give it in the -tree parameter"	int 	no
+option  "dontOptimizeBranchLengths"	B	"Don't optimize branch lengths"	flag	off
+#option  "dontIterate"			I	"Don't do iterative NJ"			flag	off
+option  "epsilonLikelihoodImprovement"  E       "The threshold for optimization of likelihood of the tree"              float   default="0.01"    no
+option  "epsilonLikelihoodImprovement4alphaOptimiz"  -       "The threshold for optimization of likelihood of the tree"              float   default="0.01"    no
+option  "epsilonLikelihoodImprovement4BBL"  -       "The threshold for optimization of likelihood of the tree"              float   default="0.01"    no
+
+

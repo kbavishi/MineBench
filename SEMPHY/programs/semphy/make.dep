@@ -1,0 +1,185 @@
+approxSemphyDistance.o approxSemphyDistance.debug.o: approxSemphyDistance.cpp ../../lib/definitions.h \
+ ../../lib/doubleRep.h ../../lib/definitions.h approxSemphyDistance.h \
+ ../../lib/computePijComponent.h ../../lib/tree.h ../../lib/readTree.h \
+ ../../lib/errorMsg.h ../../lib/logFile.h ../../lib/stochasticProcess.h \
+ ../../lib/pijAccelerator.h ../../lib/replacementModel.h \
+ ../../lib/distribution.h ../../lib/countTableComponent.h \
+ ../../lib/fromCountTableComponentToDistance.h \
+ ../../lib/countTableComponent.h ../../lib/suffStatComponent.h \
+ semphyDistance.h ../../lib/tree.h ../../lib/sequenceContainer.h \
+ ../../lib/sequence.h ../../lib/alphabet.h ../../lib/computeCounts.h \
+ ../../lib/sequenceContainer.h ../../lib/computePijComponent.h \
+ ../../lib/suffStatComponent.h ../../lib/treeIt.h ../../lib/logFile.h
+constantSemphyDistance.o constantSemphyDistance.debug.o: constantSemphyDistance.cpp \
+ constantSemphyDistance.h semphyDistance.h ../../lib/definitions.h \
+ ../../lib/doubleRep.h ../../lib/definitions.h
+correctToCanonialForm.o correctToCanonialForm.debug.o: correctToCanonialForm.cpp \
+ correctToCanonialForm.h ../../lib/tree.h ../../lib/definitions.h \
+ ../../lib/doubleRep.h ../../lib/readTree.h ../../lib/errorMsg.h \
+ ../../lib/logFile.h ../../lib/definitions.h ../../lib/logFile.h
+minSpanTree.o minSpanTree.debug.o: minSpanTree.cpp minSpanTree.h ../../lib/definitions.h \
+ ../../lib/doubleRep.h ../../lib/definitions.h rearangeTree.h \
+ semphyDistance.h ../../lib/tree.h ../../lib/readTree.h \
+ ../../lib/errorMsg.h ../../lib/logFile.h ../../lib/logFile.h
+Multinomial.o Multinomial.debug.o: Multinomial.cpp Multinomial.h
+rearangeTree.o rearangeTree.debug.o: rearangeTree.cpp rearangeTree.h semphyDistance.h \
+ ../../lib/definitions.h ../../lib/doubleRep.h ../../lib/definitions.h \
+ ../../lib/tree.h ../../lib/readTree.h ../../lib/errorMsg.h \
+ ../../lib/logFile.h ../../lib/logFile.h
+semphy.o semphy.debug.o: semphy.cpp bootstrapProvider.h ../../lib/bootstrap.h \
+ ../../lib/definitions.h ../../lib/doubleRep.h ../../lib/split.h \
+ ../../lib/splitMap.h ../../lib/tree.h ../../lib/readTree.h \
+ ../../lib/errorMsg.h ../../lib/logFile.h ../../lib/treeUtil.h \
+ ../../lib/definitions.h mainSemphy.h ../../lib/aaJC.h \
+ ../../lib/replacementModel.h ../../lib/alphabet.h ../../lib/amino.h \
+ ../../lib/alphabet.h ../../lib/geneticCodeHolder.h ../../lib/codon.h \
+ ../../lib/chebyshevAccelerator.h ../../lib/pijAccelerator.h \
+ ../../lib/clustalFormat.h ../../lib/sequenceContainer.h \
+ ../../lib/sequence.h ../../lib/distanceMethod.h ../../lib/fastaFormat.h \
+ ../../lib/gammaDistribution.h ../../lib/distribution.h ../../lib/hky.h \
+ ../../lib/maseFormat.h ../../lib/molphyFormat.h ../../lib/nucJC.h \
+ ../../lib/nucleotide.h ../../lib/phylipFormat.h \
+ ../../lib/readDatMatrix.h ../../lib/datMatrixHolder.h \
+ ../../lib/sequenceContainer.h semphy_cmdline.h \
+ ../../lib/stochasticProcess.h ../../lib/tree.h \
+ ../../lib/trivialAccelerator.h ../../lib/uniDistribution.h \
+ ../../lib/cmdline2EvolObjs.h ../../lib/amino.h ../../lib/nucleotide.h \
+ ../../lib/stochasticProcess.h ../../lib/uniDistribution.h \
+ ../../lib/trivialAccelerator.h ../../lib/alphaTrivialAccelerator.h \
+ ../../lib/readDatMatrix.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/talRandom.h ../../lib/nucJC.h ../../lib/aaJC.h ../../lib/hky.h \
+ ../../lib/gammaDistribution.h ../../lib/recognizeFormat.h \
+ distanceBasedSeqs2TreeFactory.h ../../lib/distanceBasedSeqs2Tree.h \
+ ../../lib/distanceMethod.h ../../lib/likeDist.h \
+ ../../lib/countTableComponent.h ../../lib/jcDistance.h \
+ ../../lib/distances2Tree.h ../../lib/givenRatesMLDistance.h \
+ ../../lib/posteriorDistance.h ../../lib/pairwiseGammaDistance.h \
+ ../../lib/nj.h ../../lib/njConstrain.h ../../lib/errorMsg.h
+semphyDistance.o semphyDistance.debug.o: semphyDistance.cpp semphyDistance.h \
+ ../../lib/definitions.h ../../lib/doubleRep.h ../../lib/definitions.h
+semphySearchBestTree.o semphySearchBestTree.debug.o: semphySearchBestTree.cpp semphySearchBestTree.h \
+ ../../lib/alphabet.h ../../lib/sequenceContainer.h \
+ ../../lib/definitions.h ../../lib/doubleRep.h ../../lib/sequence.h \
+ ../../lib/errorMsg.h ../../lib/alphabet.h ../../lib/tree.h \
+ ../../lib/readTree.h ../../lib/logFile.h ../../lib/stochasticProcess.h \
+ ../../lib/pijAccelerator.h ../../lib/replacementModel.h \
+ ../../lib/distribution.h ../../lib/bestAlpha.h \
+ ../../lib/likelihoodComputation.h ../../lib/computePijComponent.h \
+ ../../lib/tree.h ../../lib/stochasticProcess.h \
+ ../../lib/sequenceContainer.h ../../lib/suffStatComponent.h \
+ ../../lib/gammaDistribution.h ../../lib/uniDistribution.h \
+ ../../lib/aaJC.h ../../lib/nucJC.h ../../lib/pijAccelerator.h \
+ ../../lib/trivialAccelerator.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/nucleotide.h ../../lib/amino.h ../../lib/geneticCodeHolder.h \
+ ../../lib/codon.h ../../lib/phylipFormat.h ../../lib/maseFormat.h \
+ ../../lib/fastaFormat.h ../../lib/likelihoodComputation.h \
+ ../../lib/computePijComponent.h ../../lib/seqContainerTreeMap.h \
+ ../../lib/treeIt.h ../../lib/gammaDistribution.h ../../lib/bblEM.h \
+ ../../lib/countTableComponent.h ../../lib/NNiProp.h ../../lib/NNiSep.h \
+ ../../lib/jcDistance.h ../../lib/distanceMethod.h \
+ ../../lib/distanceTable.h ../../lib/nj.h ../../lib/njConstrain.h \
+ ../../lib/distances2Tree.h semphyStep.h ../../lib/suffStatComponent.h \
+ semphyDistance.h ../../lib/definitions.h rearangeTree.h minSpanTree.h \
+ ../../lib/computeUpAlg.h ../../lib/computeDownAlg.h \
+ ../../lib/computeMarginalAlg.h ../../lib/logFile.h \
+ ../../lib/getRandomWeights.h ../../lib/treeUtil.h
+semphyStep.o semphyStep.debug.o: semphyStep.cpp semphyStep.h ../../lib/suffStatComponent.h \
+ ../../lib/definitions.h ../../lib/doubleRep.h semphyDistance.h \
+ ../../lib/definitions.h rearangeTree.h ../../lib/tree.h \
+ ../../lib/readTree.h ../../lib/errorMsg.h ../../lib/logFile.h \
+ minSpanTree.h ../../lib/sequenceContainer.h ../../lib/sequence.h \
+ ../../lib/alphabet.h ../../lib/computePijComponent.h ../../lib/tree.h \
+ ../../lib/stochasticProcess.h ../../lib/pijAccelerator.h \
+ ../../lib/replacementModel.h ../../lib/distribution.h \
+ ../../lib/stochasticProcess.h approxSemphyDistance.h \
+ ../../lib/countTableComponent.h \
+ ../../lib/fromCountTableComponentToDistance.h \
+ ../../lib/countTableComponent.h correctToCanonialForm.h \
+ ../../lib/likelihoodComputation.h ../../lib/computePijComponent.h \
+ ../../lib/sequenceContainer.h ../../lib/suffStatComponent.h \
+ ../../lib/searchStatus.h ../../lib/talRandom.h ../../lib/computeUpAlg.h \
+ ../../lib/computeDownAlg.h constraints.h ../../lib/treeIt.h \
+ ../../lib/someUtil.h
+constraints.o constraints.debug.o: constraints.cpp constraints.h ../../lib/tree.h \
+ ../../lib/definitions.h ../../lib/doubleRep.h ../../lib/readTree.h \
+ ../../lib/errorMsg.h ../../lib/logFile.h ../../lib/someUtil.h
+bootstrapProvider.o bootstrapProvider.debug.o: bootstrapProvider.cpp bootstrapProvider.h \
+ ../../lib/bootstrap.h ../../lib/definitions.h ../../lib/doubleRep.h \
+ ../../lib/split.h ../../lib/splitMap.h ../../lib/tree.h \
+ ../../lib/readTree.h ../../lib/errorMsg.h ../../lib/logFile.h \
+ ../../lib/treeUtil.h ../../lib/definitions.h mainSemphy.h \
+ ../../lib/aaJC.h ../../lib/replacementModel.h ../../lib/alphabet.h \
+ ../../lib/amino.h ../../lib/alphabet.h ../../lib/geneticCodeHolder.h \
+ ../../lib/codon.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/pijAccelerator.h ../../lib/clustalFormat.h \
+ ../../lib/sequenceContainer.h ../../lib/sequence.h \
+ ../../lib/distanceMethod.h ../../lib/fastaFormat.h \
+ ../../lib/gammaDistribution.h ../../lib/distribution.h ../../lib/hky.h \
+ ../../lib/maseFormat.h ../../lib/molphyFormat.h ../../lib/nucJC.h \
+ ../../lib/nucleotide.h ../../lib/phylipFormat.h \
+ ../../lib/readDatMatrix.h ../../lib/datMatrixHolder.h \
+ ../../lib/sequenceContainer.h semphy_cmdline.h \
+ ../../lib/stochasticProcess.h ../../lib/tree.h \
+ ../../lib/trivialAccelerator.h ../../lib/uniDistribution.h \
+ ../../lib/cmdline2EvolObjs.h ../../lib/amino.h ../../lib/nucleotide.h \
+ ../../lib/stochasticProcess.h ../../lib/uniDistribution.h \
+ ../../lib/trivialAccelerator.h ../../lib/alphaTrivialAccelerator.h \
+ ../../lib/readDatMatrix.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/talRandom.h ../../lib/nucJC.h ../../lib/aaJC.h ../../lib/hky.h \
+ ../../lib/gammaDistribution.h ../../lib/recognizeFormat.h \
+ distanceBasedSeqs2TreeFactory.h ../../lib/distanceBasedSeqs2Tree.h \
+ ../../lib/distanceMethod.h ../../lib/likeDist.h \
+ ../../lib/countTableComponent.h ../../lib/jcDistance.h \
+ ../../lib/distances2Tree.h ../../lib/givenRatesMLDistance.h \
+ ../../lib/posteriorDistance.h ../../lib/pairwiseGammaDistance.h \
+ ../../lib/nj.h ../../lib/njConstrain.h ../../lib/getRandomWeights.h \
+ ../../lib/logFile.h
+mainSemphy.o mainSemphy.debug.o: mainSemphy.cpp ../../lib/definitions.h \
+ ../../lib/doubleRep.h ../../lib/definitions.h mainSemphy.h \
+ ../../lib/aaJC.h ../../lib/replacementModel.h ../../lib/alphabet.h \
+ ../../lib/amino.h ../../lib/errorMsg.h ../../lib/alphabet.h \
+ ../../lib/geneticCodeHolder.h ../../lib/codon.h \
+ ../../lib/chebyshevAccelerator.h ../../lib/pijAccelerator.h \
+ ../../lib/clustalFormat.h ../../lib/sequenceContainer.h \
+ ../../lib/sequence.h ../../lib/distanceMethod.h ../../lib/fastaFormat.h \
+ ../../lib/gammaDistribution.h ../../lib/distribution.h ../../lib/hky.h \
+ ../../lib/maseFormat.h ../../lib/molphyFormat.h ../../lib/nucJC.h \
+ ../../lib/nucleotide.h ../../lib/phylipFormat.h \
+ ../../lib/readDatMatrix.h ../../lib/datMatrixHolder.h \
+ ../../lib/sequenceContainer.h semphy_cmdline.h \
+ ../../lib/stochasticProcess.h ../../lib/tree.h ../../lib/readTree.h \
+ ../../lib/logFile.h ../../lib/trivialAccelerator.h \
+ ../../lib/uniDistribution.h ../../lib/cmdline2EvolObjs.h \
+ ../../lib/amino.h ../../lib/nucleotide.h ../../lib/tree.h \
+ ../../lib/stochasticProcess.h ../../lib/uniDistribution.h \
+ ../../lib/trivialAccelerator.h ../../lib/alphaTrivialAccelerator.h \
+ ../../lib/readDatMatrix.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/talRandom.h ../../lib/nucJC.h ../../lib/aaJC.h ../../lib/hky.h \
+ ../../lib/gammaDistribution.h ../../lib/recognizeFormat.h \
+ distanceBasedSeqs2TreeFactory.h ../../lib/distanceBasedSeqs2Tree.h \
+ ../../lib/distanceMethod.h ../../lib/likeDist.h \
+ ../../lib/countTableComponent.h ../../lib/jcDistance.h \
+ ../../lib/distances2Tree.h ../../lib/givenRatesMLDistance.h \
+ ../../lib/posteriorDistance.h ../../lib/pairwiseGammaDistance.h \
+ ../../lib/nj.h ../../lib/njConstrain.h ../../lib/jcDistance.h \
+ ../../lib/distanceTable.h constraints.h ../../lib/bblEM.h \
+ ../../lib/computePijComponent.h ../../lib/suffStatComponent.h \
+ semphySearchBestTree.h ../../lib/logFile.h ../../lib/datMatrixHolder.h \
+ ../../lib/likelihoodComputation.h ../../lib/likeDist.h \
+ ../../lib/bestAlpha.h ../../lib/likelihoodComputation.h \
+ ../../lib/findRateOfGene.h ../../lib/numRec.h ../../lib/talRandom.h \
+ ../../lib/someUtil.h ../../lib/getRandomWeights.h ../../lib/codon.h \
+ ../../lib/recognizeFormat.h ../../lib/generalGammaDistributionLaguerre.h \
+ ../../lib/generalGammaDistribution.h correctToCanonialForm.h
+distanceBasedSeqs2TreeFactory.o distanceBasedSeqs2TreeFactory.debug.o: distanceBasedSeqs2TreeFactory.cpp \
+ distanceBasedSeqs2TreeFactory.h ../../lib/distanceBasedSeqs2Tree.h \
+ ../../lib/distanceMethod.h ../../lib/definitions.h ../../lib/doubleRep.h \
+ ../../lib/sequence.h ../../lib/errorMsg.h ../../lib/alphabet.h \
+ ../../lib/sequenceContainer.h ../../lib/stochasticProcess.h \
+ ../../lib/pijAccelerator.h ../../lib/replacementModel.h \
+ ../../lib/distribution.h ../../lib/likeDist.h \
+ ../../lib/countTableComponent.h ../../lib/logFile.h \
+ ../../lib/jcDistance.h ../../lib/distances2Tree.h ../../lib/tree.h \
+ ../../lib/readTree.h ../../lib/givenRatesMLDistance.h \
+ ../../lib/posteriorDistance.h ../../lib/gammaDistribution.h \
+ ../../lib/pairwiseGammaDistance.h ../../lib/nj.h ../../lib/njConstrain.h

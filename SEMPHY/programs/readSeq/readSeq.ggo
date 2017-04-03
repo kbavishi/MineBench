@@ -1,0 +1,7 @@
+# $Id: readSeq.ggo,v 1.1 2006-07-05 13:50:31 ninio Exp $ this looks better as -*- csh -*-
+
+package "read sequances and print length and number of sequances"
+purpose "make life easyer"
+version "0.9"
+section "Basic Options"
+option  "sequence"		s    "Sequence file name"			string  typestr="FILENAME" default="-"			no

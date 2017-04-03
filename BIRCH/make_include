@@ -1,0 +1,29 @@
+CPLUS = g++
+
+PURELINKEROPT = -collector=g++
+
+# CPLUSFLAGS = -O -g -DASCII -DLOGGING -DLABEL -DSUMMARY
+CPLUSFLAGS = -O -g -DASCII -DLABEL -DSUMMARY
+
+# -DLABEL: phase4 label record_id -> cluster_id;
+# -DFILTER: phase4 filter data into subfile per cluster;
+# -DSUMMARY: phase4 summarize all attributes per cluster as
+#           n, sum(vec x),sum(vec sqr(x))
+
+# -DRECTANGLE : include MBRs in each node;
+
+# -DDEBUG : print out more information for debugging purpose;
+# -DLOGGING   : log something for usage.
+
+LIBDIR =
+INCLUDES = -I. -I./AttrProj
+
+# for hpux
+# MAKEDEPEND = make depend
+# for solaris
+# MAKEDEPEND = $(CPLUS) -MM
+
+# LIBPATH = -L/s/X11/lib
+# X LIBS = -lXw -lXt -lX11
+
+

@@ -1,0 +1,30 @@
+RSEARCH version 1.1 installation instructions
+
+RSEARCH can be installed as either the normal version or the MPI
+version.  For the normal version, you get two binary files --
+"rsearch," which is the main program, and "makernamat," which makes
+the matrices from a structural RNA alignment.  The MPI version
+consists of only one binary -- "mpirsearch" -- that is an MPI version
+of the main program.  The MPI binaries and the standard binaries need
+to be compiled separately.  If you wish to compile both within the
+same distribution, make sure to run "make binclean" between the two
+compiles.  Otherwise, you may get compile-time linking errors.
+
+The steps to installing RSEARCH are as follows:
+
+1.  Configure the program with ./configure.  You can simply run the
+    command without any options if you wish to compile the standard
+    version and install it under /usr/local.  The following options
+    may also be used:
+	--prefix=DIR		Install binaries in DIR/bin and data
+				files in DIR/share/rsearch
+	--exec-prefix=DIR	Install binaries in DIR/bin
+	--with-mpi		Compile MPI version (default is NO)
+	
+2.  Make the program with "make."
+
+3.  Install the program with "make install."  Be sure you are root if
+    you need to be.
+
+4.  Run "make binclean" and repeat from step 1 if you wish to install
+    both MPI and non-MPI versions.

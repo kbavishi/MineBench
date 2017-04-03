@@ -1,0 +1,24 @@
+# STOCKHOLM 1.0
+
+#=GS BAC.SUB. DE B. subtilis SRP from SRP database
+
+BAC.SUB.             nUUGCCGUGCUAAGCGGGGAGGUAGCGGUGCCCUGUACCUGCAAUCCGCU
+#=GR BAC.SUB.     SS ..>>>>>>>>...>>.>>>...AAAAAA...<<<...>>>>>...aaaaa
+
+BAC.SUB.             CUAGCAGGGCCGAAUCCCUUCUCGAGGUUCGUUUACUUUAAGGCCUGCCU
+#=GR BAC.SUB.     SS a..<<<<<<<......>>>>>>...>>>>>>.>>>>>>>>>>......>>
+
+BAC.SUB.             UAAGUAAGUGGUGUUGACGUUUGGGUCCUGCGCAAUGGGAAUUCAUGAAC
+#=GR BAC.SUB.     SS >>>>>>..>>>>......>>>>>>>>>>>>>>>>>>>>>>.>>>>>....
+
+BAC.SUB.             CAUGUCAGGUCCGGAAGGAAGCAGCAUUAAGUGAAACCUCUCAUGUGCCG
+#=GR BAC.SUB.     SS .>>>>....>>>....<<<....<<<<...<<<<<...<<<<<<.<<.<<
+
+BAC.SUB.             CAGGGUUGCCUGGGCCGAGCUAACUGCUUAAGUAACGCUUAGGGUAGCGA
+#=GR BAC.SUB.     SS <<<<<<...<<<<<<...<<<<..<<<<<<<<.....<<<<<<<<<<<<<
+
+BAC.SUB.             AUCGACAGAAGGUGCACGGUA
+#=GR BAC.SUB.     SS <<<...<<<<<<.<<<<<<<<
+
+
+//

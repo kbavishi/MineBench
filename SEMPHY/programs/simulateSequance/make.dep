@@ -1,0 +1,19 @@
+simulateSequnce.o simulateSequnce.debug.o: simulateSequnce.cpp ../../lib/definitions.h \
+ ../../lib/doubleRep.h ../../lib/definitions.h simulateSequnce.h \
+ ../../lib/alphabet.h ../../lib/sequenceContainer.h ../../lib/sequence.h \
+ ../../lib/errorMsg.h ../../lib/alphabet.h ../../lib/stochasticProcess.h \
+ ../../lib/pijAccelerator.h ../../lib/replacementModel.h \
+ ../../lib/distribution.h ../../lib/nucleotide.h ../../lib/amino.h \
+ ../../lib/geneticCodeHolder.h ../../lib/codon.h \
+ ../../lib/uniDistribution.h ../../lib/gammaDistribution.h \
+ ../../lib/readDatMatrix.h ../../lib/datMatrixHolder.h ../../lib/aaJC.h \
+ ../../lib/nucJC.h ../../lib/hky.h ../../lib/trivialAccelerator.h \
+ ../../lib/chebyshevAccelerator.h ../../lib/phylipFormat.h \
+ ../../lib/sequenceContainer.h ../../lib/maseFormat.h \
+ ../../lib/fastaFormat.h ../../lib/clustalFormat.h \
+ ../../lib/molphyFormat.h ../../lib/simulateTree.h ../../lib/tree.h \
+ ../../lib/readTree.h ../../lib/logFile.h ../../lib/stochasticProcess.h \
+ simulateSequnce_cmdline.h ../../lib/logFile.h ../../lib/talRandom.h \
+ ../../lib/datMatrixHolder.h ../../lib/likelihoodComputation.h \
+ ../../lib/computePijComponent.h ../../lib/suffStatComponent.h \
+ ../../lib/codon.h

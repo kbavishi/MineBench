@@ -1,0 +1,13 @@
+Changes between version 1.1 and 1.0
+===================================
+1.  Altered what states you can take beginsc jump into or endsc jump out of
+to match INFERNAL
+
+2.  Integrated more recent INFERNAL code
+
+3.  Added --cmquery option, which reads in an infernal CM as query and then
+proceeds as usual
+
+4.  Added --productweights option to makernamat to create matrices where
+the weight of two sequences are multiplied to get their joint weight rather
+than averaged

@@ -1,0 +1,97 @@
+vector.o: vector.C global.h util.h vector.h
+rectangle.o: rectangle.C global.h util.h vector.h rectangle.h
+cfentry.o: cfentry.C global.h util.h vector.h rectangle.h cfentry.h
+components.o: components.C global.h util.h vector.h rectangle.h cfentry.h \
+  cutil.h parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h status.h cftree.h \
+  contree.h components.h
+cftree.o: cftree.C global.h util.h vector.h rectangle.h cfentry.h cutil.h \
+  status.h contree.h cftree.h path.h
+contree.o: contree.C global.h util.h vector.h rectangle.h cfentry.h \
+  cutil.h status.h cftree.h contree.h components.h
+samples.o: samples.C global.h util.h vector.h rectangle.h cfentry.h \
+  cutil.h parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h status.h cftree.h \
+  buffer.h samples.h
+path.o: path.C global.h util.h vector.h rectangle.h parameter.h \
+  ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h cfentry.h status.h \
+  path.h cftree.h cutil.h
+buffer.o: buffer.C global.h util.h vector.h rectangle.h cfentry.h \
+  status.h buffer.h
+recyqueue.o: recyqueue.C global.h util.h vector.h rectangle.h parameter.h \
+  ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h cfentry.h status.h \
+  cutil.h recyqueue.h
+parameter.o: parameter.C global.h parameter.h ../AttrProj/AttrProj.h \
+  ../AttrProj/DeviseTypes.h ../AttrProj/DevStatus.h ../AttrProj/RecId.h \
+  ../AttrProj/VectorArray.h ../AttrProj/vector.h \
+  ../AttrProj/ProjectionList.h
+status.o: status.C global.h util.h vector.h rectangle.h cfentry.h cutil.h \
+  parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h status.h cftree.h \
+  path.h contree.h buffer.h recyqueue.h hierarchy.h
+cutil.o: cutil.C global.h util.h vector.h rectangle.h parameter.h \
+  ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h cfentry.h status.h \
+  cftree.h cutil.h
+hierarchy.o: hierarchy.C global.h util.h vector.h rectangle.h cfentry.h \
+  cutil.h parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h hierarchy.h
+clarans.o: clarans.C global.h util.h vector.h rectangle.h cfentry.h \
+  cutil.h parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h clarans.h
+lloyd.o: lloyd.C global.h util.h vector.h rectangle.h cfentry.h cutil.h \
+  parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h lloyd.h
+kmeans.o: kmeans.C global.h util.h vector.h rectangle.h cfentry.h cutil.h \
+  parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h kmeans.h
+phase1.o: phase1.C global.h util.h vector.h rectangle.h cfentry.h cutil.h \
+  parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h status.h buffer.h \
+  recyqueue.h phase1.h
+phase2.o: phase2.C global.h util.h vector.h rectangle.h cfentry.h cutil.h \
+  parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h status.h cftree.h \
+  recyqueue.h phase2.h
+density.o: density.C global.h util.h vector.h rectangle.h parameter.h \
+  ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h cfentry.h status.h \
+  cftree.h cutil.h density.h
+phase3.o: phase3.C global.h util.h vector.h rectangle.h cfentry.h cutil.h \
+  parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h status.h cftree.h \
+  hierarchy.h clarans.h lloyd.h kmeans.h phase3.h
+phase4.o: phase4.C global.h util.h timeutil.h vector.h rectangle.h \
+  cfentry.h cutil.h parameter.h ../AttrProj/AttrProj.h \
+  ../AttrProj/DeviseTypes.h ../AttrProj/DevStatus.h ../AttrProj/RecId.h \
+  ../AttrProj/VectorArray.h ../AttrProj/vector.h \
+  ../AttrProj/ProjectionList.h status.h phase4.h
+main.o: main.C global.h util.h timeutil.h vector.h rectangle.h cfentry.h \
+  cutil.h parameter.h ../AttrProj/AttrProj.h ../AttrProj/DeviseTypes.h \
+  ../AttrProj/DevStatus.h ../AttrProj/RecId.h ../AttrProj/VectorArray.h \
+  ../AttrProj/vector.h ../AttrProj/ProjectionList.h status.h cftree.h \
+  phase1.h phase2.h phase3.h phase4.h density.h ../AttrProj/ApInit.h \
+  ../AttrProj/BufPolicy.h
+timeutil.o: timeutil.C timeutil.h
+util.o: util.C global.h util.h
+vec_utils.o: vec_utils.C global.h vector.h
+grid.o: grid.C global.h util.h vector.h rectangle.h grid.h
+box_fractal.o: box_fractal.C global.h util.h vector.h rectangle.h grid.h \
+  box_fractal.h
+cluster_fractal.o: cluster_fractal.C cluster_fractal.h

@@ -1,0 +1,30 @@
+# $Id: checkCov.ggo,v 1.2 2006-07-05 13:57:17 ninio Exp $ this looks better as -*- csh -*-
+
+package "CheckCov"
+version "3.00"
+purpose "CheckCov - A program for covarion testing.  By Pupko Tal and Nicolas Galtier"
+
+option  "sequence"		s    "Sequence file name"			string  typestr="FILENAME" default="-"			no
+option  "tree"			t    "Tree file name" 				string	typestr="FILENAME"				no
+
+option  "outputfile"		o    "Output file"       			string 	typestr="FILENAME" default="-"			no
+
+option	"branch"			n	 "number of branch for covarion analysis" int  default="-1"  no
+
+defgroup "Model"  groupdesc="Model type"
+
+groupoption 	  "day"		-  "Use 'day' model"	group="Model"
+groupoption	  "jtt"		-  "Use 'jtt' model (default)"	group="Model"
+groupoption	  "rev"		-  "Use 'rev' model"	group="Model"
+groupoption	  "wag"		-  "Use 'wag' model"	group="Model"
+groupoption	  "cprev"	-  "Use 'cprev' model"	group="Model"
+groupoption	  "aaJC"	-  "Use amino acid JC model"	group="Model"
+option            "modelfile"	-  "Use user input file as model"		string	typestr="NAME" 			no
+
+option  "startPos"      S   "start checkin from this pos"  int  default="-1" no 
+option  "endPos"        E   "stop checkin from this pos"  int  default="-1" no 
+
+section "Log Options"
+
+option  "verbose"  		v    "Log report level (verbose)"		int    	default="1"			no
+option  "Logfile"		l    "Log output file name"			string 	typestr="FILENAME" default="-"			no

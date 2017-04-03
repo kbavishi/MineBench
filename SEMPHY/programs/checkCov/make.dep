@@ -1,0 +1,37 @@
+checkCovClass.o checkCovClass.debug.o: checkCovClass.cpp checkCovClass.h \
+ ../../lib/definitions.h ../../lib/doubleRep.h ../../lib/definitions.h \
+ ../../lib/alphabet.h ../../lib/sequenceContainer.h ../../lib/sequence.h \
+ ../../lib/errorMsg.h ../../lib/alphabet.h ../../lib/treeUtil.h \
+ ../../lib/tree.h ../../lib/readTree.h ../../lib/logFile.h \
+ ../../lib/stochasticProcess.h ../../lib/pijAccelerator.h \
+ ../../lib/replacementModel.h ../../lib/distribution.h \
+ ../../lib/cmdline2EvolObjs.h ../../lib/amino.h \
+ ../../lib/geneticCodeHolder.h ../../lib/codon.h ../../lib/nucleotide.h \
+ ../../lib/sequenceContainer.h ../../lib/stochasticProcess.h \
+ ../../lib/uniDistribution.h ../../lib/trivialAccelerator.h \
+ ../../lib/alphaTrivialAccelerator.h ../../lib/readDatMatrix.h \
+ ../../lib/datMatrixHolder.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/talRandom.h ../../lib/nucJC.h ../../lib/aaJC.h ../../lib/hky.h \
+ ../../lib/gammaDistribution.h ../../lib/recognizeFormat.h \
+ checkCov_cmdline.h ../../lib/checkcovFanctors.h \
+ ../../lib/likelihoodComputation.h ../../lib/computePijComponent.h \
+ ../../lib/suffStatComponent.h ../../lib/fromInstructionFile.h \
+ ../../lib/someUtil.h ../../lib/likelihoodComputation.h \
+ ../../lib/readDatMatrix.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/uniDistribution.h ../../lib/recognizeFormat.h \
+ ../../lib/bestAlpha.h ../../lib/amino.h ../../lib/numRec.h
+checkCov.o checkCov.debug.o: checkCov.cpp ../../lib/definitions.h ../../lib/doubleRep.h \
+ ../../lib/definitions.h checkCovClass.h ../../lib/alphabet.h \
+ ../../lib/sequenceContainer.h ../../lib/sequence.h ../../lib/errorMsg.h \
+ ../../lib/alphabet.h ../../lib/treeUtil.h ../../lib/tree.h \
+ ../../lib/readTree.h ../../lib/logFile.h ../../lib/stochasticProcess.h \
+ ../../lib/pijAccelerator.h ../../lib/replacementModel.h \
+ ../../lib/distribution.h ../../lib/cmdline2EvolObjs.h ../../lib/amino.h \
+ ../../lib/geneticCodeHolder.h ../../lib/codon.h ../../lib/nucleotide.h \
+ ../../lib/sequenceContainer.h ../../lib/stochasticProcess.h \
+ ../../lib/uniDistribution.h ../../lib/trivialAccelerator.h \
+ ../../lib/alphaTrivialAccelerator.h ../../lib/readDatMatrix.h \
+ ../../lib/datMatrixHolder.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/talRandom.h ../../lib/nucJC.h ../../lib/aaJC.h ../../lib/hky.h \
+ ../../lib/gammaDistribution.h ../../lib/recognizeFormat.h \
+ checkCov_cmdline.h ../../lib/someUtil.h

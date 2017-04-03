@@ -1,0 +1,19 @@
+# $RCSfile: randGamma.ggo,v $ $Revision: 1.5 $ $Date: 2005-05-09 09:43:56 $
+purpose "generate random numbers drawn from a Gamma distribution"
+package "randGamma"
+version "1.0 $Revision: 1.5 $"
+
+# test default values
+
+#files 
+section "Program Parameters"
+option  "length"		n    "Required sequence length"			int					 yes
+option  "outputfile"		o    "Output sequence file"     		string 	typestr="FILENAME" default="-"	 no
+option  "alpha"			a    "Value of Alpha parameter for Gamma distribution" float	typestr="Alpha"	default="0.3"			yes
+option  "seed"			r    "Seed random number generator"		long					no
+
+section "Log Options"
+
+option  "verbose"  		v    "Log report level (verbose)"		int    	default="1"			no
+option  "Logfile"		l    "Log output file name"			string 	typestr="FILENAME" default="-"			no
+

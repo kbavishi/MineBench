@@ -1,0 +1,134 @@
+-- AFI --
+	Edit Makefile to set CXX to g++ or icpc
+
+-- Apriori --
+	Edit Makefile to set CXX to g++ or icpc
+
+	For icc 8.1 and 9.1 
+	1) Database.C 
+		Change #include <iostream.h> and <fstream.h> to
+		#include <iostream> and <fstream>
+	2) Itemset.h 
+		Change #include <iostream.h> to #include <iostream>
+	3) No_output_parapr.C 
+		Change #include <iostream.h> and <fstream.h> to
+		#include <iostream> and <fstream>
+		Insert transaction *dataset to line 28 
+	4) pardp.h 
+		Insert using namespacestd; to line 18.
+		Insert extern transaction* dataset; to line 19.
+
+	For gcc 
+		if you need no OpenMP feature, wrap #ifdef OPENMP and #endif
+		statements for the openmp calls (eg. omp_set_num_threads)
+		in all the files
+	1) Database.C
+		line 1, delete the following lines
+        	#include <fstream.h>
+        	#include <iostream.h>
+
+	2) Database.h
+		delete line 4
+		#include <fstream.h>
+
+	3) Itemset.h
+		replace line 4 with
+        	#include <iostream>
+
+	4) no_output_parapr.C
+		replace line 4 with
+        	#include <iostream>
+		replace line 6 with
+        	#include <fstream>
+        	replace line 15 with
+        	#include <string.h>
+        	add the following in line 22
+        	transaction* data_set;
+
+	5) pardhp.h
+		add the following in line 11
+        	using namespace std;
+        	replace line 19 with the following
+        	extern transaction *data_set;
+
+	For newer versions of ICC and GCC 4.2 and later, the HashTree.C line
+	75-76 needs to be changed to omp_destrop_lock instead of omp_unset_lock.
+
+-- Bayesian --
+	edit make.common to set CC to gcc or icc
+
+-- BIRCH --
+	edit make_include to set CPLUS to gcc or icpc
+
+-- ECLAT --
+	edit Makefile to set CXX to g++ or icpc
+
+-- HOP --
+	edit Makefile to set CXX to g++ or icpc
+
+-- KMeans --
+	edit Makefile to set CC to gcc or icc
+
+-- ParETI --
+	edit Makefile to set MPICXX to MPI compiler, eg. mpicxx or CC
+
+-- PLSA --
+	Change Makefile or Makefile.omp to use gcc/g++ or icc/icpc
+
+	For gcc 2.95, 3.2, 3.4.5 
+		Change makefiles icc to gcc, icpc to g++
+		In parallelswalgorithm.cpp, comment out #include <emmint.h>,
+		comment mm_pause and getcyclecount parts
+		In common.h change #include <omp.h> to ifdef style.
+
+-- Recursive_Weak and Recursive_Weak_pp --
+	edit Makefile to set CXX to g++ or icpc
+	For MPI, edit Makefile to set CXX to mpicxx -DUSE_MPI
+
+-- RSEARCH  --
+	run configure command "./configure CC=icc" or "./configure CC=gcc"
+
+	For gcc 3.4.5 
+		In stats.c uncomment #define OPENMP
+		Change makefile to link math library (-lm)
+-- ScalParC --
+	edit Makefile to set CC to gcc or icc
+	
+-- SEMPHY --
+	Edit lib/Makefile and programs/Makefile.generic to use g++ or icpc
+
+-- SVM_RFE --
+	Edit Makefile to set CCOMPILE/CPPCOMPILE to gcc/g++ or icc/icpc
+
+	For icc 8.1 and 9.1
+		Change makefile.omp GCC line from icc to icpc
+		Library inclusion in makefile needs to be changed to your
+		installation of MKL.
+
+-- SNP --
+	cd SNP/pnl.snp/PNL 
+	run commands "./configure CC=gcc CXX=g++"
+	run "make"
+       	cd ../snp 
+	edit Makefile to set CXX to g++ and run command "make"
+	This will produce executable named "snp".
+
+	For icc 7.1 and 8.1
+		In source directory c_pgmtk, delete all references to examples
+		and tests in the makefile.
+		First build pnl.snp/PNL then pnl.snp/snp.
+		If there are compilation issues, try running ./configure.icc
+		in pnl source directory.
+
+-- Utility --
+	Edit para_tran_utility/Makefile and tran_utility/Makefile to set CXX
+	to g++ or icpc
+
+	For gcc 2.95
+		Insert #include <stdio.h> to utility.c
+
+	For newer versions of ICC and GCC 4.2.x and newer versions line 76-77
+	of Hashtree.cc needs to be changed to omp_destroy_lock instead of
+	omp_unset_lock.
+
+

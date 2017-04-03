@@ -1,0 +1,104 @@
+Iterative NJ, posterior-distance, 4 seqs
+Finished iterative tree reconstruction
+Final results:
+# The log likelihood of the tree is:
+-3631.67
+# Alpha:
+0.790072
+# The tree
+(47_YS81_CA:0.544206,9_Q18384_Q:0.787724,(22_Q53403:0.039915,21_Q52467:0.003435):1.447874);
+START OF LOG FILE
+argv = "../distanceBasedSeqs2TreeSA" "-s" "1blsA.a1.0.croped4.chopped500.seq.fasta" "-o" "1blsA.a1.0.croped4.chopped500.seq.iterativeNJ.posterior.out" "-T" "1blsA.a1.0.croped4.chopped500.seq.iterativeNJ.posterior.tree" "-O" "-l" "1blsA.a1.0.croped4.chopped500.seq.iterativeNJ.posterior.log" "-v" "6" "-E" "0.01" "--epsilonLikelihoodImprovement4alphaOptimiz" "0.03" "--epsilonLikelihoodImprovement4BBL" "0.03" "--posterior"
+Using Gamma ASRV with 8 bins
+# the date is Tue Oct 17 14:48:42 2006
+
+# iterativeDistanceSeqs2Tree::seqs2TreeIterativeInternal:
+# Initial tree:
+(47_YS81_CA:0.371272,9_Q18384_Q:0.455393,(22_Q53403:0.027152,21_Q52467:0.015375):0.741029);
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 0
+# old L = -1.79769e+308	# new L = -3651.13
+# new Alpha = 1.38103
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 0
+# After BBL new L = -3636.68 old L = -3651.13
+# The tree:(47_YS81_CA:0.469513,9_Q18384_Q:0.647413,(22_Q53403:0.0354061,21_Q52467:0.00785269):1.13672);
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 1
+# old L = -3636.68	# new L = -3633.83
+# new Alpha = 0.983508
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 1
+# After BBL new L = -3632.55 old L = -3633.83
+# The tree:(47_YS81_CA:0.503876,9_Q18384_Q:0.717832,(22_Q53403:0.0382374,21_Q52467:0.00498164):1.29785);
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 2
+# old L = -3632.55	# new L = -3632.14
+# new Alpha = 0.864571
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 2
+# After BBL new L = -3631.82 old L = -3632.14
+# The tree:(47_YS81_CA:0.519877,9_Q18384_Q:0.751908,(22_Q53403:0.039467,21_Q52467:0.00368468):1.37802);
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 3
+# old L = -3631.82	# new L = -3631.77
+# new Alpha = 0.837936
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 3
+# After BBL new L = -3631.72 old L = -3631.77
+# The tree:(47_YS81_CA:0.524991,9_Q18384_Q:0.76215,(22_Q53403:0.0399907,21_Q52467:0.00317387):1.40106);
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 4
+# old L = -3631.72	# new L = -3631.71
+# new Alpha = 0.826591
+# iterativeDistanceSeqs2Tree::seqs2TreeOneIterationInternal:
+# Homogeneous rates tree
+(47_YS81_CA:0.524991,9_Q18384_Q:0.76215,(22_Q53403:0.0399907,21_Q52467:0.00317387):1.40106);
+# Log likelihood:
+-3631.71
+# the date is Tue Oct 17 14:49:00 2006
+
+# iterativeDistanceSeqs2Tree::seqs2TreeIterativeInternalInitTreeGiven
+# the date is Tue Oct 17 14:49:00 2006
+
+# iterativeDistanceSeqs2Tree::seqs2TreeIterativeInternalInitTreeGiven:
+# The given initial tree:
+(47_YS81_CA:0.524991,9_Q18384_Q:0.76215,(22_Q53403:0.0399907,21_Q52467:0.00317387):1.40106);
+# the date is Tue Oct 17 14:49:00 2006
+
+# Iteration 1:
+(47_YS81_CA:0.546452,9_Q18384_Q:0.789357,(22_Q53403:0.0399548,21_Q52467:0.00372888):1.43145);
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 0
+# old L = -1.79769e+308	# new L = -3631.7
+# new Alpha = 0.790072
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 0
+# After BBL new L = -3631.67 old L = -3631.7
+# The tree:(47_YS81_CA:0.544206,9_Q18384_Q:0.787724,(22_Q53403:0.0399148,21_Q52467:0.00343491):1.44787);
+# iterativeDistanceSeqs2Tree::seqs2TreeOneIterationInternal:
+# Tree based on alpha
+(47_YS81_CA:0.544206,9_Q18384_Q:0.787724,(22_Q53403:0.0399148,21_Q52467:0.00343491):1.44787);
+# Log likelihood:
+-3631.67
+# the date is Tue Oct 17 14:49:03 2006
+
+# Iteration 2:
+(47_YS81_CA:0.554897,9_Q18384_Q:0.81125,(22_Q53403:0.0388344,21_Q52467:0.00515001):1.48047);
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 0
+# old L = -1.79769e+308	# new L = -3631.77
+# new Alpha = 0.790072
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 0
+# After BBL new L = -3631.71 old L = -3631.77
+# The tree:(47_YS81_CA:0.547069,9_Q18384_Q:0.798655,(22_Q53403:0.0392557,21_Q52467:0.00440213):1.47456);
+# bestAlphaAndBBL::bestAlphaAndBBL iteration 1
+# old L = -3631.71	# new L = -3631.71
+# new Alpha = 0.790072
+# iterativeDistanceSeqs2Tree::seqs2TreeOneIterationInternal:
+# Tree based on alpha
+(47_YS81_CA:0.547069,9_Q18384_Q:0.798655,(22_Q53403:0.0392557,21_Q52467:0.00440213):1.47456);
+# Log likelihood:
+-3631.71
+# the date is Tue Oct 17 14:49:06 2006
+
+# iterativeDistanceSeqs2Tree::seqs2TreeIterativeInternalInitTreeGiven:
+# Finished iterative distance-based tree reconstruction, done 2 iterations
+# the date is Tue Oct 17 14:49:06 2006
+
+Finished iterative tree reconstruction
+Final results:
+# The log likelihood of the tree is:
+-3631.67
+# Alpha:
+0.790072
+# The tree
+(47_YS81_CA:0.544206,9_Q18384_Q:0.787724,(22_Q53403:0.0399148,21_Q52467:0.00343491):1.44787);

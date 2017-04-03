@@ -1,0 +1,30 @@
+# STOCKHOLM 1.0
+
+#=GS S.cerevisiae DE S.cerevisiae RNaseP from RNaseP database
+
+S.cerevisiae         GUGGAACAGUGGUAAUUCCUACGAUUAAGAAACCUGUUUACAGAAGGAUC
+#=GR S.cerevisiae SS .>>>>>>>>>>>>>..>>>>>>.........>>>>>..........>>>>
+
+S.cerevisiae         CCCACCUAUGGGCGGGUUAUCAGAUAUUAUCAGGUGGGAAAUUCGGUGGA
+#=GR S.cerevisiae SS >>>>....<<<..<<<<<............<<<<<.............>>
+
+S.cerevisiae         ACACAGUGGAGCCUUGUCCUCCGGGUUAAUGUCGCUUUUGGCAUUGGCCC
+#=GR S.cerevisiae SS >>.....>>>>>..........>>>>>>>>>>>>....<<<<<<<<<<<<
+
+S.cerevisiae         CUGCUCCUGAGAGAAGAAAUAUACUGGGGAACCAGUCUUUACCGACCGUU
+#=GR S.cerevisiae SS .............>>>......>>>>>....<<<<<<<<........>>>
+
+S.cerevisiae         GUUAUCAGAAAUUCACGGAGUUCGGCCUAGGUCGGACUCCGAUGGGAACG
+#=GR S.cerevisiae SS >>>............>>>>>>>>>>>....<<<<<<<<<<<........<
+
+S.cerevisiae         GCAACGGUUGUUCCGUUUGACUUGUCGCCCGCUACGGCGUGAGCGUCAAG
+#=GR S.cerevisiae SS <<<<<....<<<<<<<<<>>>>>>.>>>.>>>......<<<.<<<.<<<.
+
+S.cerevisiae         GUCUGUUGAGUGCAAUCGUAGGACGUCAUUAGUGGCGAACCCGAUACCGA
+#=GR S.cerevisiae SS <<<..............<<<<<<>>>>>....<<<<<.............
+
+S.cerevisiae         UUACUGCUGCUGUUCCAGC
+#=GR S.cerevisiae SS ....<<<<<<<<<<<<<..
+
+
+//

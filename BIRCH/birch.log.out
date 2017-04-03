@@ -1,0 +1,673 @@
+Global Parameters:
+CorD	0
+TotalMemSize	81920
+TotalBufferSize	4096
+TotalQueueSize	4096
+TotalOutlierTreeSize	4096
+ntrees	1
+3 24	
+total_attrcnt	3
+total_attrsize	24
+***************Status of birch.ntreestat.out-0
+WMflag	0
+W	1 1 1 
+M	0 0 0 
+Dimension	3
+PageSize	1024
+MemSize	80
+BufferSize	4
+QueueSize	4
+OutlierTreeSize	4
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+Bars	100	100	100	
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	0
+CurFt	0
+MemUsed 	0
+TreeSize	0
+PrevEntryCnt	0
+CurrEntryCnt	0
+PrevDataCnt	0
+CurrDataCnt	0
+AvgDensity	0
+NoiseCnt	0
+Ranges	0 0 0 -1 -1 -1 
+SplitBuffer
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	3
+PageSize	1024
+MemSize	4
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	0
+CurFt	0
+MemUsed 	0
+TreeSize	0
+PrevEntryCnt	0
+CurrEntryCnt	0
+PrevDataCnt	0
+CurrDataCnt	0
+AvgDensity	0
+NoiseCnt	0
+Ranges	0 0 0 -1 -1 -1 
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+***************Status of birch.ntreestat.out-0
+WMflag	0
+W	1 1 1 
+M	0 0 0 
+Dimension	3
+PageSize	1024
+MemSize	80
+BufferSize	4
+QueueSize	4
+OutlierTreeSize	4
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+Bars	100	100	100	
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	0
+CurFt	0
+MemUsed 	1
+TreeSize	1
+PrevEntryCnt	0
+CurrEntryCnt	0
+PrevDataCnt	0
+CurrDataCnt	0
+AvgDensity	0
+NoiseCnt	0
+Ranges	0 0 0 -1 -1 -1 
+Root CF	0	nan	nan	nan	nan	0	0	
+FootPrint	0
+Leaf Nodes	1
+Nonleaf Nodes	0
+Tree Size	1
+Tree Depth	1
+Leaf Entries	0
+Nonleaf Entries	0
+Occupancy	0
+SplitBuffer
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	3
+PageSize	1024
+MemSize	4
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	0
+CurFt	0
+MemUsed 	1
+TreeSize	1
+PrevEntryCnt	0
+CurrEntryCnt	0
+PrevDataCnt	0
+CurrDataCnt	0
+AvgDensity	0
+NoiseCnt	0
+Ranges	0 0 0 -1 -1 -1 
+Root CF	0	nan	nan	nan	nan	0	0	
+FootPrint	0
+Leaf Nodes	1
+Nonleaf Nodes	0
+Tree Size	1
+Tree Depth	1
+Leaf Entries	0
+Nonleaf Entries	0
+Occupancy	0
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+******************Init******************
+Init Sys: 0 User: 0.01 Total: 0.01 Wall: 0
+
+******************Phase 1***************
+***************Status of birch.ntreestat.out-0
+WMflag	0
+W	1 1 1 
+M	0 0 0 
+Dimension	3
+PageSize	1024
+MemSize	80
+BufferSize	4
+QueueSize	4
+OutlierTreeSize	4
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+Bars	100	100	100	
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	27
+CurFt	0.0719179
+MemUsed 	57
+TreeSize	57
+PrevEntryCnt	1316
+CurrEntryCnt	1052
+PrevDataCnt	61440
+CurrDataCnt	61440
+AvgDensity	40.9141
+NoiseCnt	9225
+Ranges	1.9e-05 0.000105 0.000118 0.999987 0.999993 0.99993 
+Root CF	52215	0.507561	0.506905	0.535829	0.938117	0.369368	0.522371	
+FootPrint	0.369368
+Leaf Nodes	53
+Nonleaf Nodes	4
+Tree Size	57
+Tree Depth	3
+Leaf Entries	1052
+Nonleaf Entries	56
+Occupancy	0.699495
+SplitBuffer
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	3
+PageSize	1024
+MemSize	4
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	28
+CurFt	0.219422
+MemUsed 	4
+TreeSize	4
+PrevEntryCnt	59
+CurrEntryCnt	59
+PrevDataCnt	9170
+CurrDataCnt	9225
+AvgDensity	155.424
+NoiseCnt	0
+Ranges	0.001789 0.001563 0.000399 9.78704 9.66126 9.89388 
+Root CF	9225	0.499976	0.497221	0.306918	0.811996	0.469673	0.664254	
+FootPrint	0.469673
+Leaf Nodes	3
+Nonleaf Nodes	1
+Tree Size	4
+Tree Depth	2
+Leaf Entries	59
+Nonleaf Entries	3
+Occupancy	0.568807
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+Phase1 Sys: 0 User: 2.26 Total: 2.26 Wall: 2.26
+
+******************Phase 2******************
+***************Status of birch.ntreestat.out-0
+WMflag	0
+W	1 1 1 
+M	0 0 0 
+Dimension	3
+PageSize	1024
+MemSize	80
+BufferSize	4
+QueueSize	4
+OutlierTreeSize	4
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+Bars	100	100	100	
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	27
+CurFt	0.0719179
+MemUsed 	57
+TreeSize	57
+PrevEntryCnt	1316
+CurrEntryCnt	1052
+PrevDataCnt	61440
+CurrDataCnt	61440
+AvgDensity	40.9141
+NoiseCnt	9225
+Ranges	1.9e-05 0.000105 0.000118 0.999987 0.999993 0.99993 
+Root CF	52215	0.507561	0.506905	0.535829	0.938117	0.369368	0.522371	
+FootPrint	0.369368
+Leaf Nodes	53
+Nonleaf Nodes	4
+Tree Size	57
+Tree Depth	3
+Leaf Entries	1052
+Nonleaf Entries	56
+Occupancy	0.699495
+SplitBuffer
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	3
+PageSize	1024
+MemSize	4
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	28
+CurFt	0.219422
+MemUsed 	4
+TreeSize	4
+PrevEntryCnt	59
+CurrEntryCnt	59
+PrevDataCnt	9170
+CurrDataCnt	9225
+AvgDensity	155.424
+NoiseCnt	0
+Ranges	0.001789 0.001563 0.000399 9.78704 9.66126 9.89388 
+Root CF	9225	0.499976	0.497221	0.306918	0.811996	0.469673	0.664254	
+FootPrint	0.469673
+Leaf Nodes	3
+Nonleaf Nodes	1
+Tree Size	4
+Tree Depth	2
+Leaf Entries	59
+Nonleaf Entries	3
+Occupancy	0.568807
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+Phase2 Sys: 0 User: 0 Total: 0 Wall: 0
+
+******************Phase 3******************
+birch.ntreestat.out-0:CurFt<EndFt or K<CurrEntryCnt
+birch.ntreestat.out-0:Quality of Phase3 0.250246
+***************Status of birch.ntreestat.out-0
+WMflag	0
+W	1 1 1 
+M	0 0 0 
+Dimension	3
+PageSize	1024
+MemSize	80
+BufferSize	4
+QueueSize	4
+OutlierTreeSize	4
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+Bars	100	100	100	
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	3
+Pass	27
+CurFt	0.0719179
+MemUsed 	0
+TreeSize	57
+PrevEntryCnt	1316
+CurrEntryCnt	34
+PrevDataCnt	61440
+CurrDataCnt	61440
+AvgDensity	40.9141
+NoiseCnt	9225
+Ranges	1.9e-05 0.000105 0.000118 0.999987 0.999993 0.99993 
+SplitBuffer
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	3
+PageSize	1024
+MemSize	4
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	28
+CurFt	0.219422
+MemUsed 	4
+TreeSize	4
+PrevEntryCnt	59
+CurrEntryCnt	59
+PrevDataCnt	9170
+CurrDataCnt	9225
+AvgDensity	155.424
+NoiseCnt	0
+Ranges	0.001789 0.001563 0.000399 9.78704 9.66126 9.89388 
+Root CF	9225	0.499976	0.497221	0.306918	0.811996	0.469673	0.664254	
+FootPrint	0.469673
+Leaf Nodes	3
+Nonleaf Nodes	1
+Tree Size	4
+Tree Depth	2
+Leaf Entries	59
+Nonleaf Entries	3
+Occupancy	0.568807
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+Phase3 Sys: 0.02 User: 0.35 Total: 0.37 Wall: 0.38
+
+Phase1-3 Cumulative Timer Sys: 0.02 User: 2.61 Total: 2.63 Wall: 2.64
+
+******************Phase 4****************
+birch.ntreestat.out-0:Quality of Phase4 0.211929
+***************Status of birch.ntreestat.out-0
+WMflag	0
+W	1 1 1 
+M	0 0 0 
+Dimension	3
+PageSize	1024
+MemSize	80
+BufferSize	4
+QueueSize	4
+OutlierTreeSize	4
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+Bars	100	100	100	
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	4
+Pass	0
+CurFt	0.0719179
+MemUsed 	0
+TreeSize	57
+PrevEntryCnt	1316
+CurrEntryCnt	34
+PrevDataCnt	61440
+CurrDataCnt	61440
+AvgDensity	40.9141
+NoiseCnt	0
+Ranges	1.9e-05 0.000105 0.000118 0.999987 0.999993 0.99993 
+SplitBuffer
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierQueue
+Size: 113
+Entry: 0
+Tuple: 0
+
+OutlierTree Status
+***************Status of outlier
+Dimension	3
+PageSize	1024
+MemSize	4
+BufferSize	0
+QueueSize	0
+OutlierTreeSize	0
+BDtype	2
+Ftype	0
+Phase1Scheme	0
+RebuiltAlg	0
+StayTimes	5
+NoiseRate	0.25
+Range	2000
+CFDistr	0
+H	0
+K	34
+InitFt	0
+Ft	0
+Gtype	1
+GDtype	2
+Qtype	0
+RefineAlg	1
+NoiseFlag	0
+MaxRPass	1
+Phase	1
+Pass	28
+CurFt	0.219422
+MemUsed 	4
+TreeSize	4
+PrevEntryCnt	59
+CurrEntryCnt	59
+PrevDataCnt	9170
+CurrDataCnt	9225
+AvgDensity	155.424
+NoiseCnt	0
+Ranges	0.001789 0.001563 0.000399 9.78704 9.66126 9.89388 
+Root CF	9225	0.499976	0.497221	0.306918	0.811996	0.469673	0.664254	
+FootPrint	0.469673
+Leaf Nodes	3
+Nonleaf Nodes	1
+Tree Size	4
+Tree Depth	2
+Leaf Entries	59
+Nonleaf Entries	3
+Occupancy	0.568807
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+OutlierEntryCnt	0
+OutlierTupleCnt	0
+
+Phase4 Sys: 1.07 User: 1.32 Total: 2.39 Wall: 2.43
+
+Phase1-4 Cumulative Timer Sys: 1.09 User: 3.93 Total: 5.02 Wall: 5.07
+

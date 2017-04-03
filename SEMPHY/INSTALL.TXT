@@ -1,0 +1,15 @@
+Installation
+Unpack:
+> tar xzvf semphy-2.0b1.tgz
+Go into the top directory:
+> cd semphy
+Compile
+> make all
+Test: (there may be some minor diffs between the outputs of the tests and the target outputs that come from precision or order of leaves on trees, so if you do get some minor differences of this sort, your installation is probably still OK)
+> make test
+And install the executables into the bin directory
+> make install
+This will place all semphy executables in the "semphy/bin" directory.
+
+
+ 

@@ -1,0 +1,28 @@
+distanceBasedSeqs2TreeSA.o distanceBasedSeqs2TreeSA.debug.o: distanceBasedSeqs2TreeSA.cpp \
+ distanceBasedSeqs2TreeSA_cmdline.h ../../lib/distanceBasedSeqs2Tree.h \
+ ../../lib/distanceMethod.h ../../lib/definitions.h ../../lib/doubleRep.h \
+ ../../lib/sequence.h ../../lib/errorMsg.h ../../lib/alphabet.h \
+ ../../lib/sequenceContainer.h ../../lib/stochasticProcess.h \
+ ../../lib/pijAccelerator.h ../../lib/replacementModel.h \
+ ../../lib/distribution.h ../../lib/likeDist.h \
+ ../../lib/countTableComponent.h ../../lib/logFile.h \
+ ../../lib/jcDistance.h ../../lib/distances2Tree.h ../../lib/tree.h \
+ ../../lib/readTree.h ../../lib/givenRatesMLDistance.h \
+ ../../lib/posteriorDistance.h ../../lib/gammaDistribution.h \
+ ../../lib/tree.h ../../lib/sequenceContainer.h ../../lib/logFile.h \
+ ../../lib/treeUtil.h ../../lib/someUtil.h ../../lib/codon.h \
+ ../../lib/geneticCodeHolder.h ../../lib/recognizeFormat.h \
+ ../../lib/pDistance.h ../../lib/jcDistance.h ../../lib/likeDist.h \
+ ../../lib/givenRatesMLDistance.h ../../lib/pairwiseGammaDistance.h \
+ ../../lib/likelihoodComputation.h ../../lib/computePijComponent.h \
+ ../../lib/suffStatComponent.h ../../lib/bblEM.h ../../lib/bestAlpha.h \
+ ../../lib/likelihoodComputation.h ../../lib/readDatMatrix.h \
+ ../../lib/datMatrixHolder.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/cmdline2EvolObjs.h ../../lib/amino.h ../../lib/codon.h \
+ ../../lib/nucleotide.h ../../lib/uniDistribution.h \
+ ../../lib/trivialAccelerator.h ../../lib/alphaTrivialAccelerator.h \
+ ../../lib/readDatMatrix.h ../../lib/chebyshevAccelerator.h \
+ ../../lib/talRandom.h ../../lib/nucJC.h ../../lib/aaJC.h ../../lib/hky.h \
+ ../../lib/recognizeFormat.h ../../lib/nj.h ../../lib/njConstrain.h \
+ ../../lib/bootstrap.h ../../lib/split.h ../../lib/splitMap.h \
+ ../../lib/treeUtil.h

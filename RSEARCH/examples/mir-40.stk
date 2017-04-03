@@ -1,0 +1,10 @@
+# STOCKHOLM 1.0
+#=GS mir-40L DE mir-40L precursor from C. elegans
+#=GF Mfold3.1 dG = -46.2
+
+mir-40L		GAACCTCCTGTCCGCACCTCAGTGGATGTATGCCATGATGATAAGATATC
+#=GR mir-40L SS	......>>>>>>>>>>>>>.>>>.>>>>>>>>>>.>>.>>>>>.>>>...
+
+mir-40L		AGAAATCCTATCACCGGGTGTACATCAGCTAAGGTGCGGGTACAGGT
+#=GR mir-40L SS	....<<<.<<<<<.<<<<<<<<<<<<.<<<.<<<<<<<<..<<<<<.
+//

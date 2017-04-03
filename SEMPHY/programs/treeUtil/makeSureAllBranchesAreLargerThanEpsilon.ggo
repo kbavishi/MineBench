@@ -1,0 +1,12 @@
+# $Id: makeSureAllBranchesAreLargerThanEpsilon.ggo,v 1.2 2006-02-12 11:59:26 ninio Exp $ this looks better as -*- csh -*-
+
+package "makeSureAllBranchesAreLargerThanEpsilon"
+purpose "Replace all branch length that are shorter than epsilon with epsilon"
+version "0.2"
+
+section "Basic Options"
+option  "inputTree"		t    "In file name  ('-' is cin) "	string   typestr="FILENAME" default="-"      no
+option  "outputTree"	T    "Out file name ('-' is cout)"  string   typestr="FILENAME" default="-"      no
+option  "epsilon"		e    "Minimal branch length"        float                       default="0.001"	 no
+
+

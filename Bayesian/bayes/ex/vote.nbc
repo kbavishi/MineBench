@@ -1,0 +1,30 @@
+/*----------------------------------------------------------------------
+  domains
+----------------------------------------------------------------------*/
+dom(adoption_of_the_budget_resolution) = { n, y };
+dom(physician_fee_freeze) = { n, y };
+dom(synfuels_corporation_cutback) = { n, y };
+dom(party) = { democrat, republican };
+
+/*----------------------------------------------------------------------
+  naive Bayes classifier
+----------------------------------------------------------------------*/
+nbc(party) = {
+  prob(party) = {
+    democrat  : 267,
+    republican: 168 };
+  prob(adoption_of_the_budget_resolution|party) = {
+    democrat  :{ n: 29, y: 231 },
+    republican:{ n: 142, y: 22 }};
+  prob(physician_fee_freeze|party) = {
+    democrat  :{ n: 245, y: 14 },
+    republican:{ n: 2, y: 163 }};
+  prob(synfuels_corporation_cutback|party) = {
+    democrat  :{ n: 126, y: 129 },
+    republican:{ n: 138, y: 21 }};
+};
+
+/*----------------------------------------------------------------------
+  number of attributes: 4
+  number of tuples    : 435
+----------------------------------------------------------------------*/

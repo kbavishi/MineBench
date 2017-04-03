@@ -1,0 +1,5 @@
+readSeq.o readSeq.debug.o: readSeq.cpp readSeq_cmdline.h ../../lib/sequenceContainer.h \
+ ../../lib/definitions.h ../../lib/doubleRep.h ../../lib/sequence.h \
+ ../../lib/errorMsg.h ../../lib/alphabet.h ../../lib/logFile.h \
+ ../../lib/recognizeFormat.h ../../lib/sequenceContainer.h \
+ ../../lib/amino.h ../../lib/geneticCodeHolder.h ../../lib/codon.h

@@ -1,0 +1,34 @@
+// $Id: fromCountTableComponentToDistance.h 2399 2014-03-13 22:43:51Z wkliao $
+
+#ifndef ___FROM_COUNT_TABLE_COMPONENT_TO_DISTANCE
+#define ___FROM_COUNT_TABLE_COMPONENT_TO_DISTANCE
+
+#include "definitions.h"
+#include "countTableComponent.h"
+#include "stochasticProcess.h"
+
+static const MDOUBLE startingGuessForTreeBrLen = 0.029;
+
+class fromCountTableComponentToDistance {
+
+public:
+	explicit fromCountTableComponentToDistance(
+		const countTableComponentGam& ctc,
+		const stochasticProcess &sp,
+		const MDOUBLE toll,
+		const MDOUBLE brLenIntialGuess);// =startingGuessForTreeBrLen
+
+	void computeDistance();// return the likelihood
+	MDOUBLE getDistance() { return _distance;} // return the distance.
+	MDOUBLE getLikeDistance() { return _likeDistance;} // return the distance.
+private:
+	const stochasticProcess & _sp;
+	const countTableComponentGam& _ctc;
+	MDOUBLE _toll;
+	MDOUBLE _distance;
+	MDOUBLE _likeDistance;
+	int alphabetSize() {return _ctc.alphabetSize();}
+};
+
+#endif
+

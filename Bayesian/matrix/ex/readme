@@ -1,0 +1,100 @@
+matrix - a library for vector and matrix computations
+
+Attention! This library is incomplete: the eigenvalue and eigenvector
+functions (file ../src/matrix3.c) are still missing.
+
+This file provides some explanations on how to use the programs transp,
+invert, and solve to transpose a matrix, to invert a matrix and to
+solve a linear equation system, respectively. However, it does not
+explain all options of these programs. For a list of options, call
+transp, invert, and solve without any arguments.
+
+Enjoy,
+Christian Borgelt
+
+e-mail: borgelt@iws.cs.uni-magdeburg.de
+WWW:    http://fuzzy.cs.uni-magdeburg.de/~borgelt
+
+------------------------------------------------------------------------
+
+This directory (matrix/ex) contains two matrices (test1.mat and
+test2.mat) and three linear equation systems (test1.les to test3.les),
+which can be used to test the programs transp, invert, and solve.
+
+The program transp transposes a matrix. Invoking it with
+  transp test1.mat out.mat
+on the first file, which contains the matrix
+  3 2 1
+  1 0 2
+  4 1 3
+should yield the output
+  3 1 4
+  2 0 1
+  1 2 3
+This matrix is stored in the file "out.dat" (second program argument).
+If a minus sign ('-') is specified instead of a file name, input is read
+from standard input or output is sent to standard output, respectively.
+Omitting the output file name has the same effect (for the output).
+That is, with
+  transp test1.mat       or       transp test1.mat -
+the output is sent to the terminal.
+
+The program invert inverts a matrix. Since the inverse of the matrix
+in the file test1.mat is
+  -2/5 -1  4/5
+   1    1 -1
+   1/5  1 -2/5
+applying the program invert with 
+  invert test1.mat -o"% .1f"
+should yield the output (which goes to the terminal, since no output
+file is specified)
+  -0.4 -1.0  0.8
+   1.0  1.0 -1.0
+   0.2  1.0 -0.4
+The option -o"% .1f" is used to get a proper alignment of the output:
+It specifies the format with which the numbers are printed (for a
+description of this format string refer to the documentation of the
+C function printf).
+
+The matrix in the file test2.mat is
+    9  -36   30
+  -36  192 -180
+   30 -180  180
+Its inverse is
+    1  1/2  1/3
+  1/2  1/3  1/4
+  1/3  1/4  1/5
+Therefore
+  invert test2.mat -o"%.2f"
+should yield
+  1.00 0.50 0.33
+  0.50 0.33 0.25
+  0.33 0.25 0.20
+
+The program solve solves a linear equation system. Such a system is
+specified by a coefficient matrix and a right hand side vector. The
+input file has the following general format:
+  c_11 c_12 ... c_1n   r_1
+  c_21 c_22 ... c_2n   r_2
+  ...                  ...
+  c_n1 c_n2 ... c_nn   r_n
+Here c_ij is the coefficient of x_j in the ith equation, r_i is
+the right hand side of the ith equation. In matrix/vector form this
+specifies the linear equation system
+  C * x = r
+The linear equation systems in the test files are
+test1.les:    4  1    9
+              1  9   13
+test2.les:    4  6    3
+              6 22   -9
+test3.les:    4  1  9    9
+              1  9  1   13
+              9  1 33   23
+The solutions of these linear equation systems are
+test1.les:    x_1 =  68/35  \approx  1.94286
+              x_2 =  43/35  \approx  1.22857
+test2.les:    x_1 =  30/13  \approx  2.30769
+              x_2 = -27/26  \approx -1.03846
+test3.les:    x_1 =  64/55  \approx  1.16364
+              x_2 = 281/220 \approx  1.27727
+              x_3 =  15/44  \approx  0.340909

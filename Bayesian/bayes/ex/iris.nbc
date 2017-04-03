@@ -1,0 +1,39 @@
+/*----------------------------------------------------------------------
+  domains
+----------------------------------------------------------------------*/
+dom(sepal_length) = IR;
+dom(sepal_width) = IR;
+dom(petal_length) = IR;
+dom(petal_width) = IR;
+dom(iris_type) = { Iris-setosa, Iris-versicolor, Iris-virginica };
+
+/*----------------------------------------------------------------------
+  naive Bayes classifier
+----------------------------------------------------------------------*/
+nbc(iris_type) = {
+  prob(iris_type) = {
+    Iris-setosa    : 50,
+    Iris-versicolor: 50,
+    Iris-virginica : 50 };
+  prob(sepal_length|iris_type) = {
+    Iris-setosa    : N(5.006, 0.124249) [50],
+    Iris-versicolor: N(5.936, 0.266433) [50],
+    Iris-virginica : N(6.588, 0.404343) [50] };
+  prob(sepal_width|iris_type) = {
+    Iris-setosa    : N(3.428, 0.14369) [50],
+    Iris-versicolor: N(2.77, 0.0984694) [50],
+    Iris-virginica : N(2.974, 0.104004) [50] };
+  prob(petal_length|iris_type) = {
+    Iris-setosa    : N(1.462, 0.0301592) [50],
+    Iris-versicolor: N(4.26, 0.220816) [50],
+    Iris-virginica : N(5.552, 0.304588) [50] };
+  prob(petal_width|iris_type) = {
+    Iris-setosa    : N(0.246, 0.0111061) [50],
+    Iris-versicolor: N(1.326, 0.0391061) [50],
+    Iris-virginica : N(2.026, 0.0754327) [50] };
+};
+
+/*----------------------------------------------------------------------
+  number of attributes: 5
+  number of tuples    : 150
+----------------------------------------------------------------------*/

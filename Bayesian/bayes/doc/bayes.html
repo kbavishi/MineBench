@@ -1,0 +1,485 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!-- ===================================================================
+  File    : bayes.html
+  Contents: Description of full and naive Bayes classifiers
+  Author  : Christian Borgelt
+==================================================================== -->
+<html>
+<head>
+<title>Full and Naive Bayes Classifiers</title>
+</head>
+
+<!-- =============================================================== -->
+
+<body bgcolor=white>
+<h1><a name="top">Full and Naive Bayes Classifiers</h1>
+<h3>(A Brief Documentation of the Programs bci / bcx / bcdb / corr)</a></h3>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3>Contents</h3>
+<ul type=disc>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#domains">Determining Attribute Domains</a></li>
+<li><a href="#induce">Inducing a Bayes Classifier</a></li>
+<li><a href="#exec">Executing a Bayes Classifier</a></li>
+<li><a href="#xmat">Computing a Confusion Matrix</a></li>
+<li><a href="#gendb">Generating a Database</a></li>
+<li><a href="#corr">Computing Covariances and
+                    Correlation Coefficients</a></li>
+<li><a href="#copying">Copying</a></li>
+<li><a href="#download">Download</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="intro">Introduction</a></h3>
+
+<p>I am sorry that there is no detailed documentation yet. Below you
+can find a brief explanation of how to induce a full or naive Bayes
+classsifier with the program <tt>bci</tt> and how to execute a Bayes
+classifier with the program <tt>bcx</tt>. For a list of options, call
+the programs without any arguments.</p>
+
+<p>Enjoy,<br>
+<a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/">
+Christian Borgelt</a></p>
+
+<p>As a simple example for the explanations below I use the dataset
+in the file <tt>bayes/ex/drug.tab</tt>, which lists 12 records of
+patient data (sex, age, and blood pressure) together with an effective
+drug (effective w.r.t. some unspecified disease). The contents of this
+file is:</p>
+
+<pre>   Sex    Age Blood_pressure Drug
+   male   20  normal         A
+   female 73  normal         B
+   female 37  high           A
+   male   33  low            B
+   female 48  high           A
+   male   29  normal         A
+   female 52  normal         B
+   male   42  low            B
+   male   61  normal         B
+   female 30  normal         A
+   female 26  low            B
+   male   54  high           A
+</pre>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="domains">Determining Attribute Domains</a></h3>
+
+<p>To induce a Bayes classifier for the effective drug, one first
+has to determine the domains of the table columns using the program
+<tt>dom</tt> (to be found in the table package, see below):</p>
+
+<pre>  dom -a drug.tab drug.dom</pre>
+
+<p>The program <tt>dom</tT> assumes that the first line of the table
+file contains the column names. (This is the case for the example file
+<tt>drug.tab</tt>.) If you have a table file without column names, you
+can let the program read the column names from another file (using the
+<tt>-h</tt> option) or you can let the program generate default names
+(using the <tt>-d</tt> option), which are simply the column numbers.
+The <tt>-a</tt> option tells the program to determine automatically
+the column data types. Thus the values of the <tt>Age</tt> column are
+automatically recognized as integer values.</p>
+
+<p>After dom has finished, the contents of the file <tt>drug.dom</tt>
+should look like this:</p>
+
+<pre>  dom(Sex) = { male, female };
+  dom(Age) = ZZ;
+  dom(Blood_pressure) = { normal, high, low };
+  dom(Drug) = { A, B };
+</pre>
+
+<p>The special domain <tt>ZZ</tt> represents the set of integer numbers,
+the special domain <tt>IR</tt> (not used here) the set of real numbers.
+(The double <tt>Z</tt> and the <tt>I</tt> in front of the <tt>R</tt>
+are intended to mimic the bold face or double stroke font used in
+mathematics to write the set of integer or the set of real numbers.
+All programs that need to read a domain description also recognize
+a single <tt>Z</tt> or a single <tt>R</tt>.)</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="induce">Inducing a Bayes Classifier</a></h3>
+
+<p>Induce a naive Bayes classifier with the <tt>bci</tt> program
+(<tt>bci</tt> is simply an abbreviation of Bayes Classifier
+Induction):</p>
+
+<pre>  bci -sa drug.dom drug.tab drug.nbc</pre>
+
+<p>You need not tell the program <tt>bci</tt> that the <tt>Drug</tt>
+column contains the class, since by default it uses the last column as
+the class column (the <tt>Drug</tt> column is the last column in the
+file <tt>drug.tab</tt>). If a different column contains the class,
+you can specify its name on the command line using the <tt>-c</tt>
+option, e.g. <tt>-c Drug</tt>.</p>
+
+<p>At first glance it seems to be superfluous to provide the
+<tt>bci</tt> program with a domain description, since it is also
+given the table file and thus can determine the domains itself.
+But without a domain description, the <tt>bci</tt> program would be
+forced to use all columns in the table file and to use them with the
+automatically determined data types. But occasions may arise in which
+you want to induce a naive Bayes classifier from a subset of the
+columns or in which the numbers in a column are actually coded
+symbolic values. In such a case the domain file provides a way to
+tell the <tt>bci</tt> program about the columns to use and their
+data types. To ignore a column, simply remove the corresponding
+domain definition from the domain description file (or comment it out
+--- C-style (<tt>/* ... */</tt>) and C++-style (<tt>// ... </tt>)
+comments are supported). To change the data type of a column, simply
+change the domain definition.</p>
+
+<p>By default the program <tt>bci</tt> uses all attributes given in
+the domain description file. However, it can also be instructed to
+simplify the classifier by using only a subset of the attributes.
+This is done with the options <tt>-sa</tt> or <tt>-sr</tt> (s for
+simplify), the first of which is used in the example above. With the
+first option attributes are added one by one (a for add) as long as
+the classification result improves on the training data. With the
+second option, attributes are removed one by one (r for remove) as
+long as the classification result does not get worse.</p>
+
+<p>With the above command the induced naive Bayes classifier is
+written to the file <tt>drug.nbc</tt>. The contents of this file
+should look like this:</p>
+
+<pre>  nbc(Drug) = {
+    prob(Drug) = {
+      A: 6,
+      B: 6 };
+    prob(Age|Drug) = {
+      A: N(36.3333, 161.867) [6],
+      B: N(47.8333, 310.967) [6] };
+    prob(Blood_pressure|Drug) = {
+      A:{ high: 3, low: 0, normal: 3 },
+      B:{ high: 0, low: 3, normal: 3 }};
+  };
+</pre>
+
+<p>The prior probabilities of the class attribute's values are stated
+first (as absolute frequencies), followed by the conditional
+probabilities of the descriptive attributes. For symbolic attributes
+a simple frequency table is stored. For numeric attributes a normal
+distribution is used, which is stated as
+<tt>N(&mu;, &sigma;<sup>2</sup>) [n]</tt>. Here &mu; is the expected
+value, &sigma;<sup>2</sup> is the variance, and <tt>n</tt> is the number
+of tuples these parameters were estimated from. <tt>n</tt> may differ
+from the number of cases for the corresponding class, since for some
+tuples the value of the attribute may be missing.</p>
+
+<p>In this example, however, since there are no missing values, the
+value of is identical to the number of cases for the corresponding
+class.</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="exec">Executing a Bayes Classifier</a></h3>
+
+<p>An induced naive Bayes classifier can be used to classify new data
+using the program <tt>bcx</tt> (<tt>bcx</tt> is simply an abbreviation
+for Bayes Classifier eXecution):</p>
+
+<pre>  bcx -a drug.nbc drug.tab drug.cls</pre>
+
+<p><tt>drug.tab</tt> is the table file (since we do not have special
+test data, we simply use the training data), <tt>drug.cls</tt> is the
+output file. After <tt>bcx</tt> has finished, <tt>drug.cls</tt>
+contains (in addition to the columns appearing in the naive Bayes
+classifier, and, for preclassified data, the class column) a new
+column <tt>bc</tt>, which contains the class that is predicted by
+the naive Bayes classifier. You can give this new column a different
+name with the <tt>-c</tt> option, e.g. <tt>-c predicted</tt>.</p>
+
+<p>If the table contains preclassified data and the name of the
+column containing the preclassification is the same as for the
+training data, the error rate of the naive Bayes classifier is
+determined and printed to the terminal.</p>
+
+<p>The contents of the file <tt>drug.cls</tt> should look like this:</p>
+
+<pre>  Sex    Age Blood_pressure Drug bc
+  male   20  normal         A    A
+  female 73  normal         B    B
+  female 37  high           A    A
+  male   33  low            B    B
+  female 48  high           A    A
+  male   29  normal         A    A
+  female 52  normal         B    B
+  male   42  low            B    B
+  male   61  normal         B    B
+  female 30  normal         A    A
+  female 26  low            B    B
+  male   54  high           A    A
+</pre>
+
+<p>That is, the classification is perfect, which is not surprising
+for such a simple example. The columns are neatly aligned because
+of the <tt>-a</tt> option. Without it, there would only be a single
+space between two column values.</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="xmat">Computing a Confusion Matrix</a></h3>
+
+<p>The classification quality can be inspected in more detail with
+the program <tt>xmat</tt> (determine a confusion matrix, to be found
+in the table package, see below):</p>
+
+<pre>  xmat drug.cls</pre>
+
+<p>This program reads the output of the program <tt>bcx</tt> and
+computes a confusion matrix from two columns of this file. It uses
+the last two columns by default (the last column for the x- and the
+semi-last for the y-direction), which is fine for our example. Other
+columns can be selected via the options <tt>-x</tt> and <tt>-y</tt>
+followed by the name of the column that is to be used for the x- or
+y-direction of the confusion matrix. The output of the program
+<tt>xmat</tt>, which by default is written to the terminal, should
+read like this:</p>
+
+<pre>  confusion matrix for Drug vs. bc:
+   no | value  |      1      2 | errors
+  ----+--------+---------------+-------
+    1 | A      |      6      0 |      0
+    2 | B      |      0      6 |      0
+  ----+--------+---------------+-------
+      | errors |      0      0 |      0
+</pre>
+
+<p>In this matrix the x-direction corresponds to the column <tt>bc</tt>
+and the y-direction to the column <tt>Drug</tt>. Since in our simple
+example the classification is perfect, only the fields in the diagonal
+differ from zero. If the classification is not perfect, the other
+fields show what errors are made by the decision tree classifier.</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="gendb">Generating a Database</a></h3>
+
+<p>The program <tt>bcdb<tt> can be used to generate a database of
+sample cases from a full or naive Bayes classifier. For example,
+invoking it with</p>
+
+<pre>  bcdb test.fbc test.tab</pre>
+
+<p>generates a database with 1000 tuples from the full Bayes classifier
+<tt>test.fbc</tt> that can be found in the directory <tt>ex<tt>.
+The number of tuples to be generated can be changed with the option
+<tt>-n#<tt>, where <tt>#<tt> is to be replaced by the desired number.
+For other options call the program without any arguments.</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="corr">Computing Covariances and
+                   Correlation Coefficients</a></h3>
+
+<p>The program <tt>corr</tt> can be used to computed covariances
+and correlation coefficients. By invoking it with</p>
+
+<pre>  correl -xvc iris.tab</pre>
+
+<p>the expected values and standard deviations (option <tt>-x</tt>),
+the covariances (option <tt>-v</tt>) and the correlation coefficients
+(option <tt>-c</tt>) for the four numeric attributes of the well-known
+iris data are computed. The output should look like this:</p>
+
+<pre>   no | attribute    | exp. val. | std. dev.
+   ---+--------------+-----------+----------
+    1 | sepal_length |  5.843333 |  0.825301
+    2 | sepal_width  |  3.057333 |  0.434411
+    3 | petal_length |  3.758000 |  1.759404
+    4 | petal_width  |  1.199333 |  0.759693
+
+   covariance matrix
+   no | attribute    |        1        2        3        4
+   ---+--------------+------------------------------------
+    1 | sepal_length |  0.68112 -0.04215  1.26582  0.51283
+    2 | sepal_width  |           0.18871 -0.32746 -0.12083
+    3 | petal_length |                    3.09550  1.28697
+    4 | petal_width  |                             0.57713
+
+   correlation coefficients
+   no | attribute    |     1     2     3     4
+   ---+--------------+------------------------
+    1 | sepal_length |  1.00 -.118  .872  .818
+    2 | sepal_width  |        1.00 -.428 -.366
+    3 | petal_length |              1.00  .963
+    4 | petal_width  |                    1.00
+</pre>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="copying">Copying</a></h3>
+
+<p>bci/bcx/bcdb/corr -
+   induce and execute full and naive Bayes classifiers<br>
+   copyright &copy; 1996-2003 Christian Borgelt</p>
+
+<p>These programs are free software; you can redistribute them
+and/or modify them under the terms of the
+<a href="http://www.fsf.org/copyleft/lesser.html">
+GNU Lesser (Library) General Public License</a> as published by the
+<a href="http://www.fsf.org">Free Software Foundation</a>.</p>
+
+<p>These programs are distributed in the hope that they will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+<a href="http://www.fsf.org/copyleft/lesser.html">
+GNU Lesser (Library) General Public License</a> for more details.</p>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="download">Download</a></h3>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td valign=top><b>Sources:</b></td><td></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/bayes.tar.gz">
+    bayes.tar.gz</a> (72 kb)
+    <a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/bayes.zip">
+    bayes.zip</a> (87 kb)
+    (package version 2.10, 2003.04.26)</td></tr>
+<tr><td></td><td></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/table.tar.gz">
+    table.tar.gz</a> (125 kb)
+    <a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/table.zip">
+    table.zip</a> (162 kb)
+    (package version 2.12, 2003.01.30)</td></tr>
+<tr><td valign=top><b>Unix:</b></td><td width=10></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/lnxbayes.zip">
+    lnxbayes.zip</a> (Linux executables, 146 kb)</td></tr>
+<tr><td></td><td></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/lnxtable.zip">
+    lnxtable.zip</a>
+    (Linux executables, 206 kb)</td></tr>
+<tr><td valign=top><b>Windows:</b></td><td></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/winbayes.zip">
+    winbayes.zip</a> (Windows console executables, 190 kb)</td></tr>
+<tr><td></td><td></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/src/wintable.zip">
+    wintable.zip</a>
+    (Windows console executables, 265 kb)</li>
+</table>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<h3><a name="contact">Contact</a></h3>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr><td valign=top>Snail mail:</td><td width=10></td>
+    <td><a href="http://fuzzy.cs.uni-magdeburg.de/~borgelt/index.html">
+        Christian Borgelt</a><br>
+        <a href="http://fuzzy.cs.uni-magdeburg.de/index.html">
+        Working Group Neural Networks and Fuzzy Systems</a><br>
+        <a href="http://www-iws.cs.uni-magdeburg.de/iws.html"> 
+        Department of Knowledge Processing and Language Engineering</a><br>
+        <a href="http://www.cs.uni-magdeburg.de/">
+        School of Computer Science</a><br>
+        <a href="http://www.uni-magdeburg.de/">
+        Otto-von-Guericke-University of Magdeburg</a><br>
+        Universit&auml;tsplatz 2<br>
+        D-39106 Magdeburg<br>
+        Germany</td></tr>
+<tr><td valign=top>E-mail:</td><td></td>
+    <td><a href="mailto:christian.borgelt@cs.uni-magdeburg.de">
+        christian.borgelt@cs.uni-magdeburg.de</a><br>
+        <a href="mailto:borgelt@iws.cs.uni-magdeburg.de">
+        borgelt@iws.cs.uni-magdeburg.de</a></td></tr>
+<tr><td>Phone:</td><td></td>
+    <td>+49 391 67 12700</td></tr>
+<tr><td>Fax:</td><td></td>
+    <td>+49 391 67 12018</td></tr>
+<tr><td>Office:</td><td></td>
+    <td>29.015</td></tr>
+</table>
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+<tr><td width="95%" align=right><a href="#top">back to the top</a></td>
+    <td width=5></td>
+    <td><a href="#top"><img src="uparrow.gif" border=0></a></td></tr>
+</table>
+
+<!-- =============================================================== -->
+<p><img src="line.gif" alt="" height=7 width=704></p>
+
+<address>&copy; 1999-2003
+<a href="mailto:borgelt@iws.cs.uni-magdeburg.de">Christian Borgelt</a>
+</address>
+<!-- Created: Thu May 24 12:28:05 CEST 2001 -->
+<!-- hhmts start -->
+Last modified: Sat Apr 26 17:06:15 PDT 2003
+<!-- hhmts end -->
+</body>
+</html>

@@ -1,0 +1,11 @@
+sametree.o sametree.debug.o: sametree.cpp ../../lib/treeUtil.h ../../lib/definitions.h \
+ ../../lib/doubleRep.h ../../lib/tree.h ../../lib/readTree.h \
+ ../../lib/errorMsg.h ../../lib/logFile.h sametree_cmdline.h
+shortenTree.o shortenTree.debug.o: shortenTree.cpp ../../lib/tree.h ../../lib/definitions.h \
+ ../../lib/doubleRep.h ../../lib/readTree.h ../../lib/errorMsg.h \
+ ../../lib/logFile.h ../../lib/logFile.h shortenTree_cmdline.h
+makeSureAllBranchesAreLargerThanEpsilon.o makeSureAllBranchesAreLargerThanEpsilon.debug.o: \
+ makeSureAllBranchesAreLargerThanEpsilon.cpp \
+ makeSureAllBranchesAreLargerThanEpsilon_cmdline.h ../../lib/tree.h \
+ ../../lib/definitions.h ../../lib/doubleRep.h ../../lib/readTree.h \
+ ../../lib/errorMsg.h ../../lib/logFile.h ../../lib/logFile.h

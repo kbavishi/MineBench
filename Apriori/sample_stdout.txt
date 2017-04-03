@@ -1,0 +1,20 @@
+Database /store/janaki/NU-MineBench-2.0/datasets/APR/data.ntrans_1000.tlen_10.nitems_1.npats_2000.patlen_6 sup 0.007500
+nthreads=4 MAIN 3.497440 Cands 63 Total time= 3.497585, IO time =1.376703, Comp Time =2.120882
+ 
+
+Database /store/janaki/NU-MineBench-2.0/datasets/APR/data.ntrans_1000.tlen_10.nitems_1.npats_2000.patlen_6 sup 0.007500
+nthreads=4 MAIN 4.816038 Cands 63 Total time= 4.816210, IO time =1.429857, Comp Time =3.386353
+ 
+
+Database /store/janaki/NU-MineBench-2.0/datasets/APR/data.ntrans_1000.tlen_10.nitems_1.npats_2000.patlen_6 sup 0.007500
+nthreads=4 MAIN 4.216100 Cands 63 Total time= 4.216340, IO time =0.424608, Comp Time =3.791732
+ 
+
+Database /store/janaki/NU-MineBench-2.0/datasets/APR/data.ntrans_1000.tlen_10.nitems_1.npats_2000.patlen_6 sup 0.007500
+nthreads=4 MAIN 3.963325 Cands 63 Total time= 3.963479, IO time =0.364130, Comp Time =3.599349
+ 
+
+Database /store/janaki/NU-MineBench-2.0/datasets/APR/data.ntrans_1000.tlen_10.nitems_1.npats_2000.patlen_6 sup 0.007500
+nthreads=4 MAIN 3.524624 Cands 63 Total time= 3.524762, IO time =0.385964, Comp Time =3.138798
+ 
+

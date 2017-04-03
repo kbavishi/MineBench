@@ -1,0 +1,20 @@
+/*----------------------------------------------------------------------
+  domains
+----------------------------------------------------------------------*/
+dom(handicapped_infants) = { n, y };
+dom(water_project_cost_sharing) = { n, y };
+dom(adoption_of_the_budget_resolution) = { n, y };
+dom(physician_fee_freeze) = { n, y };
+dom(el_salvador_aid) = { n, y };
+dom(religious_groups_in_schools) = { n, y };
+dom(anti_satellite_test_ban) = { n, y };
+dom(aid_to_nicaraguan_contras) = { n, y };
+dom(mx_missile) = { n, y };
+dom(immigration) = { n, y };
+dom(synfuels_corporation_cutback) = { n, y };
+dom(education_spending) = { n, y };
+dom(superfund_right_to_sue) = { n, y };
+dom(crime) = { n, y };
+dom(duty_free_exports) = { n, y };
+dom(export_administration_act_south_africa) = { n, y };
+dom(party) = { democrat, republican };

@@ -1,0 +1,28 @@
+################OPTION###################
+CCOMPILE = icc
+CPPCOMPILE = icc
+COMPILEOPTION = -c -g -openmp -O3 -D_OPT -D_MKL -p -qp
+INCLUDEDIR = -I/opt/intel/vtune/analyzer/include -I/opt/intel/mkl721/include
+LIBHOME = 
+LINK = icc
+LINKOPTION = -g -openmp -o ./svm_mkl
+LIBS = 
+LIBDIRS =  
+OBJS = wtime.o svm.o svm_rfe.o svm_rfe_test.o
+OUTPUT = ./svm_mkl
+################OPTION END################
+$(OUTPUT):$(OBJS)
+	$(LINK) $(OBJS) /opt/intel/mkl721/lib/32/libmkl_ia32.a $(LINKOPTION) $(LIBS) $(LIBDIRS)
+
+clean: 
+	rm -f $(OBJS)
+	rm -f $(OUTPUT)
+all: clear $(OUTPUT)
+.SUFFIXES:
+.SUFFIXES:  .c .o .cpp
+
+.cpp.o:
+	 $(CPPCOMPILE) -g -o $*.o $(COMPILEOPTION) $(INCLUDEDIR)  $*.cpp
+
+.c.o:
+	$(CCOMPILE) -g -o $*.o $(COMPILEOPTION) $(INCLUDEDIR) $*.c

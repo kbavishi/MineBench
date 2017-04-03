@@ -1,0 +1,443 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/darren@hiebert.com/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.0.1	//
+AFX_DEBUG_H__7DA3D1C7_3F72_4E31_89E1_E529CE1DC4D1__INCLUDED_	Debug.h	6;"	d
+AFX_PARASWGLOBALMEMORY_H__A7303D9F_42CF_499D_A0A9_AEBD70834691__INCLUDED_	ParaSWGlobalMemory.h	6;"	d
+AFX_PARASWPARAM_H__A8D19220_B205_4136_A044_A3DF624B0558__INCLUDED_	ParaSWParam.h	6;"	d
+AFX_PARASWPATH_H__6E9522BB_E22B_4CAB_A637_5CBC9986F72D__INCLUDED_	ParaSWPath.h	6;"	d
+AFX_PARASWPROBLEM_H__A96EAE84_71F1_4BBC_95AB_86AA978C1B11__INCLUDED_	ParaSWProblem.h	6;"	d
+AFX_PARASWPROCESSORSET_H__D208B8CF_855C_43F7_BBA3_5BCFDF32E5FD__INCLUDED_	ParaSWProcessorSet.h	6;"	d
+AFX_PARSEFILE_H__7E73DF21_AC74_48FE_B608_3F5E33FA8760__INCLUDED_	ParseFile.h	6;"	d
+ALIGNMENT_ALGORITHM_MASK	ParaSWParam.h	44;"	d
+ALIGNMENT_ALGORITHM_nw	ParaSWParam.h	45;"	d
+ALIGNMENT_ALGORITHM_sw	ParaSWParam.h	46;"	d
+ALIGNMENT_PROCESS_MASK	ParaSWParam.h	54;"	d
+ALIGNMENT_PROCESS_parallel	ParaSWParam.h	56;"	d
+ALIGNMENT_PROCESS_sequential	ParaSWParam.h	55;"	d
+ALIGNMENT_SCORE_MASK	ParaSWParam.h	47;"	d
+ALIGNMENT_SCORE_aff	ParaSWParam.h	49;"	d
+ALIGNMENT_SCORE_lin	ParaSWParam.h	48;"	d
+ALIGNMENT_SCORE_s_aff	ParaSWParam.h	50;"	d
+ALIGNMENT_STRATEGY_MASK	ParaSWParam.h	57;"	d
+ALIGNMENT_STRATEGY_fastLSA	ParaSWParam.h	59;"	d
+ALIGNMENT_STRATEGY_normal	ParaSWParam.h	58;"	d
+ALIGNMENT_STRATEGY_onelevelfastLSA	ParaSWParam.h	60;"	d
+ALIGNMENT_STRATEGY_parallelSW	ParaSWParam.h	61;"	d
+ALIGNMENT_SUBMATRIX_MASK	ParaSWParam.h	51;"	d
+ALIGNMENT_SUBMATRIX_no	ParaSWParam.h	53;"	d
+ALIGNMENT_SUBMATRIX_yes	ParaSWParam.h	52;"	d
+ALIGNMENT_TYPE_forLSA	ParaSWParam.h	38;"	d
+ALIGNMENT_TYPE_single	ParaSWParam.h	37;"	d
+ALIGN_BYTES	Common.h	16;"	d
+ALIGN_NW_AFF	ParaSWParam.h	35;"	d
+ALIGN_NW_LIN	ParaSWParam.h	33;"	d
+ALIGN_TEST_LOCAL	ParaSWParam.h	34;"	d
+AddHead	ParaSWPath.cpp	/^ParaSWPathGrid* ParaSWPathGridList::AddHead(ParaSWPathGrid *pg)$/;"	f	class:ParaSWPathGridList
+AddHead	ParaSWPath.cpp	/^ParaSWPathGrid* ParaSWPathGridList::AddHead(ParaSWPathGridList *pl)$/;"	f	class:ParaSWPathGridList
+AddHead	ParaSWProcessorSet.cpp	/^ParaSWProcessorListNode* ParaSWProcessorList::AddHead(ParaSWProcessor *pp)$/;"	f	class:ParaSWProcessorList
+AddHead	ParaSWProcessorSet.cpp	/^ParaSWProcessorListNode* ParaSWProcessorList::AddHead(ParaSWProcessorListNode *pn)$/;"	f	class:ParaSWProcessorList
+AddSolvedGrids	ParaSWPath.cpp	/^void ParaSWPath::AddSolvedGrids(ParaSWPathGrid* pg)$/;"	f	class:ParaSWPath
+AddUnSolvedGrid	ParaSWPath.cpp	/^void ParaSWPath::AddUnSolvedGrid(ParaSWPathGrid* pg)$/;"	f	class:ParaSWPath
+AllocatePath	ParaSWPath.cpp	/^bool ParaSWPathGrid::AllocatePath()$/;"	f	class:ParaSWPathGrid
+Allocate_Mem	Common.h	45;"	d
+Allocate_Mem	Common.h	89;"	d
+Allocate_Mem2D	Common.h	46;"	d
+Allocate_Mem2D	Common.h	91;"	d
+Allocate_Mem2D_1	Common.h	58;"	d
+Allocate_Mem2D_1	Common.h	97;"	d
+Allocate_Mem_1	Common.h	103;"	d
+Allocate_Mem_1	Common.h	64;"	d
+AssignGridCache	ParaSWProblem.cpp	/^bool ParaSWProblem::AssignGridCache(ParaSWGlobalMemory &gMem)$/;"	f	class:ParaSWProblem
+AssignPathGridToProcessor	ParallelSWAlgorithm.cpp	/^void AssignPathGridToProcessor(ParaSWPath *paths,$/;"	f
+AssignProcessors	ParaSWProcessorSet.cpp	/^bool ParaSWProcessorSet::AssignProcessors(ParaSWProcessorList &targetList,ParaSWProblem *problem)$/;"	f	class:ParaSWProcessorSet
+BackwardFindPath	ParallelSWAlgorithm.cpp	/^void BackwardFindPath(ParaSWPath* paths,ParaSWParam& param)$/;"	f
+BackwardFindPathsForHugeBlock	ParallelSWAlgorithm.cpp	/^void BackwardFindPathsForHugeBlock(ParaSWPath* paths, ParaSWProcessorSet *pMainSet, ParaSWParam& param)$/;"	f
+BeachLine	ParaSWProblem.cpp	/^BeachLine::BeachLine()$/;"	f	class:BeachLine
+BeachLine	ParaSWProblem.h	/^class BeachLine$/;"	c
+Bound	ParaSWParam.h	/^struct Bound{$/;"	s
+CCOMPILE	Makefile	/^CCOMPILE = icc$/;"	m
+CDebug	Debug.cpp	/^CDebug::CDebug()$/;"	f	class:CDebug
+CDebug	Debug.h	/^class CDebug  $/;"	c
+CHAR_END	ParaSWPath.h	36;"	d
+CHAR_GAP	ParaSWPath.h	34;"	d
+CHAR_UNPAIR	ParaSWPath.h	35;"	d
+COMPILEOPTION	Makefile	/^COMPILEOPTION = -c -g -O3 -ipo$/;"	m
+CPPCOMPILE	Makefile	/^CPPCOMPILE = icc$/;"	m
+CParseFile	ParseFile.cpp	/^CParseFile::CParseFile()$/;"	f	class:CParseFile
+CParseFile	ParseFile.h	/^class CParseFile  $/;"	c
+Empty	ParaSWProcessorSet.cpp	/^void ParaSWProcessorList::Empty()$/;"	f	class:ParaSWProcessorList
+FASTLSA_TYPE_PARALLEL	ParaSWParam.h	41;"	d
+FASTLSA_TYPE_SEQUENTIAL	ParaSWParam.h	40;"	d
+FT_DNA	ParaSWParam.h	72;"	d
+FT_FILE1	ParaSWParam.h	15;"	d
+FT_FILE2	ParaSWParam.h	16;"	d
+FT_FULL_SUBMATRIX	ParaSWParam.h	97;"	d
+FT_PROTEIN	ParaSWParam.h	71;"	d
+FT_UNKNOWN_SEQWUENCE_TYPE	ParaSWParam.h	73;"	d
+FillBlock	ParaSWProblem.cpp	/^bool ParaSWProblem::FillBlock(bool isSW)$/;"	f	class:ParaSWProblem
+FillBlock_nw	ParaSWProblem.cpp	/^bool ParaSWProblem::FillBlock_nw()$/;"	f	class:ParaSWProblem
+FillBlock_sw	ParaSWProblem.cpp	/^bool ParaSWProblem::FillBlock_sw()$/;"	f	class:ParaSWProblem
+FillGridCache	ParallelSWAlgorithm.cpp	/^bool FillGridCache(ParaSWProblem *problem,bool isSW)$/;"	f
+FillGridCache_each_processor	ParallelSWAlgorithm.cpp	/^bool FillGridCache_each_processor(ParaSWProblem *sub_problem,$/;"	f
+FillGridCache_implement	ParallelSWAlgorithm.cpp	/^bool FillGridCache_implement(ParaSWProcessor *proc,bool isWidthOnGrid,bool isHeightOnGrid,bool isSW)$/;"	f
+FillGridCache_nw	ParallelSWAlgorithm.cpp	/^bool FillGridCache_nw(ParaSWProblem *problem)$/;"	f
+FillGridCache_nw_single_processor	ParallelSWAlgorithm.cpp	/^bool FillGridCache_nw_single_processor(ParaSWProblem *problem)$/;"	f
+FillGridCache_single_processor	ParallelSWAlgorithm.cpp	/^bool FillGridCache_single_processor(ParaSWProblem *problem,bool isSW)$/;"	f
+FillGridCache_sw	ParallelSWAlgorithm.cpp	/^bool FillGridCache_sw(ParaSWProblem *problem)$/;"	f
+FindMinimalLoad	ParallelSWAlgorithm.cpp	/^int FindMinimalLoad(int* group_proc[],int group_proc_count[],double used_area[],int gCount)$/;"	f
+FindMyGroup	ParallelSWAlgorithm.cpp	/^int FindMyGroup(int* group_proc[],int group_proc_count[],int gCount,int my_rank)$/;"	f
+FindPathGrid	ParallelSWAlgorithm.cpp	/^ParaSWPathGrid* FindPathGrid(ParaSWPath* paths,int k)$/;"	f
+ForwardFillCache	ParallelSWAlgorithm.cpp	/^void ForwardFillCache(ParaSWParam &param,$/;"	f
+GetCount	ParaSWPath.cpp	/^int ParaSWPathGridList::GetCount()$/;"	f	class:ParaSWPathGridList
+GetCount	ParaSWProcessorSet.cpp	/^int ParaSWProcessorList::GetCount()$/;"	f	class:ParaSWProcessorList
+GetCycleCount	ParallelSWAlgorithm.cpp	/^unsigned __int64 GetCycleCount ()$/;"	f
+GetData	ParseFile.cpp	/^bool CParseFile::GetData(char FileName[], int DataType)$/;"	f	class:CParseFile
+GetHead	ParaSWPath.cpp	/^ParaSWPathGrid* ParaSWPathGridList::GetHead()$/;"	f	class:ParaSWPathGridList
+GetHead	ParaSWProcessorSet.cpp	/^ParaSWProcessorListNode* ParaSWProcessorList::GetHead()$/;"	f	class:ParaSWProcessorList
+GetHugePathGrid	ParallelSWAlgorithm.cpp	/^ParaSWPathGrid* GetHugePathGrid(ParaSWPath* paths)$/;"	f
+GetMatrix	ParseFile.cpp	/^bool CParseFile::GetMatrix(char FileName[], int MatrixType)$/;"	f	class:CParseFile
+GetOneReadyTask	ParaSWProblem.cpp	/^ParaSWReadyTask * ParaSWReadyTaskArray::GetOneReadyTask()$/;"	f	class:ParaSWReadyTaskArray
+GetPathsFromResultQueue	ParallelSWAlgorithm.cpp	/^bool GetPathsFromResultQueue(ParaSWPath *paths)$/;"	f
+GetProcessors	ParaSWProblem.cpp	/^bool ParaSWProblem::GetProcessors(ParaSWProcessorList &pList)$/;"	f	class:ParaSWProblem
+GetUnSolvablePathGrid	ParallelSWAlgorithm.cpp	/^ParaSWPathGrid* GetUnSolvablePathGrid(ParaSWPath* paths,ParaSWParam* param)$/;"	f
+GetUnSolved	ParaSWPath.cpp	/^ParaSWPathGrid* ParaSWPath::GetUnSolved()$/;"	f	class:ParaSWPath
+INCLUDEDIR	Makefile	/^INCLUDEDIR =$/;"	m
+InitBeachLine	ParaSWProblem.cpp	/^bool BeachLine::InitBeachLine(ParaSWProblem *problem,ParaSWGlobalMemory *gMem)$/;"	f	class:BeachLine
+InitBeachLineFront	ParaSWProblem.cpp	/^bool BeachLine::InitBeachLineFront(ParaSWProblem *problem,ParaSWGlobalMemory *gMem)$/;"	f	class:BeachLine
+InitBeachLineNodes	ParaSWProblem.cpp	/^bool BeachLine::InitBeachLineNodes(ParaSWProblem *problem,ParaSWGlobalMemory *gMem)$/;"	f	class:BeachLine
+InitData	ParseFile.cpp	/^bool CParseFile::InitData()$/;"	f	class:CParseFile
+InitGlobalMemory	ParaSWGlobalMemory.cpp	/^bool ParaSWGlobalMemory::InitGlobalMemory(ParaSWParam *param, ParaSWPathGrid* path_grid)$/;"	f	class:ParaSWGlobalMemory
+InitGridBlockDivision	ParaSWParam.cpp	/^bool ParaSWGridBlockDivision::InitGridBlockDivision($/;"	f	class:ParaSWGridBlockDivision
+InitGridBlockDivisionSimple	ParaSWParam.cpp	/^bool ParaSWGridBlockDivision::InitGridBlockDivisionSimple($/;"	f	class:ParaSWGridBlockDivision
+InitLocalProblem	ParaSWProblem.cpp	/^bool ParaSWProblem::InitLocalProblem(ParaSWParam *param,ParaSWPathGrid *pg)$/;"	f	class:ParaSWProblem
+InitMainProblem	ParaSWProblem.cpp	/^bool ParaSWProblem::InitMainProblem(ParaSWParam *param,ParaSWPathGrid *pg)$/;"	f	class:ParaSWProblem
+InitMemory_Solvable	ParaSWProblem.cpp	/^bool ParaSWProblem::InitMemory_Solvable()$/;"	f	class:ParaSWProblem
+InitNodeArray	ParaSWProblem.cpp	/^bool NodeArray::InitNodeArray(int k)$/;"	f	class:NodeArray
+InitParameters	ParaSWParam.cpp	/^void ParaSWParam::InitParameters(int ali_type,$/;"	f	class:ParaSWParam
+InitPath	ParaSWPath.cpp	/^bool ParaSWPath::InitPath()$/;"	f	class:ParaSWPath
+InitPathGrid	ParaSWPath.cpp	/^bool ParaSWPathGrid::InitPathGrid(int path_id,int start_i,int start_j,$/;"	f	class:ParaSWPathGrid
+InitPathGrid	ParaSWPath.cpp	/^bool ParaSWPathGrid::InitPathGrid(int start_i,int start_j,$/;"	f	class:ParaSWPathGrid
+InitProblem	ParaSWProblem.cpp	/^bool ParaSWProblem::InitProblem()$/;"	f	class:ParaSWProblem
+InitProcessor	ParaSWProcessorSet.cpp	/^bool ParaSWProcessor::InitProcessor(int h,int w)$/;"	f	class:ParaSWProcessor
+InitProcessorSet	ParaSWProcessorSet.cpp	/^bool ParaSWProcessorSet::InitProcessorSet(ParaSWParam *param, ParaSWPathGrid* path_grid)$/;"	f	class:ParaSWProcessorSet
+InitReadyTaksArray	ParaSWProblem.cpp	/^bool ParaSWReadyTaskArray::InitReadyTaksArray(int p_count)$/;"	f	class:ParaSWReadyTaskArray
+InitTopLeftData_nw	ParallelSWAlgorithm.cpp	/^bool InitTopLeftData_nw(ParaSWProblem *problem)	\/\/init top left data(nw local), according to path_grid start and end$/;"	f
+InitTopLeftData_sw	ParallelSWAlgorithm.cpp	/^bool InitTopLeftData_sw(ParaSWProblem *problem)	\/\/init top left data(sw global)$/;"	f
+Init_nw_01	ParaSWProblem.cpp	/^void Node::Init_nw_01(int s0,char t1,int st0h,int st0w,char ts0)$/;"	f	class:Node
+Init_nw_02	ParaSWProblem.cpp	/^void Node::Init_nw_02(int s0,int st0h,int st0w,char ts0)$/;"	f	class:Node
+Init_nw_10	ParaSWProblem.cpp	/^void Node::Init_nw_10(int s0,char t2,int st0h,int st0w,char ts0)$/;"	f	class:Node
+Init_nw_20	ParaSWProblem.cpp	/^void Node::Init_nw_20(int s0,int st0h,int st0w,char ts0)$/;"	f	class:Node
+IsBlockProblem	ParaSWProblem.cpp	/^bool ParaSWProblem::IsBlockProblem()$/;"	f	class:ParaSWProblem
+IsEmpty	ParaSWPath.cpp	/^bool ParaSWPathGridList::IsEmpty()$/;"	f	class:ParaSWPathGridList
+IsEmpty	ParaSWProcessorSet.cpp	/^bool ParaSWProcessorList::IsEmpty()$/;"	f	class:ParaSWProcessorList
+IsMainProblem	ParaSWProblem.cpp	/^bool ParaSWProblem::IsMainProblem()$/;"	f	class:ParaSWProblem
+IsRunning	ParaSWProcessorSet.cpp	/^bool ParaSWProcessorSet::IsRunning()$/;"	f	class:ParaSWProcessorSet
+IsSolvable	ParaSWProblem.cpp	/^bool ParaSWProblem::IsSolvable()$/;"	f	class:ParaSWProblem
+IsSolvable	ParaSWProcessorSet.cpp	/^bool ParaSWProcessor::IsSolvable(int h,int w)$/;"	f	class:ParaSWProcessor
+IsSolved	ParaSWPath.cpp	/^bool ParaSWPath::IsSolved()$/;"	f	class:ParaSWPath
+IsSolved	ParaSWPath.h	/^	bool IsSolved;		\/\/solve status for this grid$/;"	m	class:ParaSWPathGrid
+IsTaskPartition	ParallelSWAlgorithm.cpp	/^bool IsTaskPartition(ParaSWPath *paths)$/;"	f
+IsTaskQueueEmpty	ParaSWPath.cpp	/^bool ParaSWPath::IsTaskQueueEmpty()$/;"	f	class:ParaSWPath
+JointAllPath	ParaSWPath.cpp	/^bool ParaSWPath::JointAllPath(Sequence *s1,Sequence *s2)$/;"	f	class:ParaSWPath
+LEFT	ParaSWPath.h	31;"	d
+LIBDIRS	Makefile	/^LIBDIRS =  $/;"	m
+LIBHOME	Makefile	/^LIBHOME = $/;"	m
+LIBS	Makefile	/^LIBS = $/;"	m
+LINK	Makefile	/^LINK = icc$/;"	m
+LINKOPTION	Makefile	/^LINKOPTION = -g -ipo -o .\/parasw$/;"	m
+LoadFile	ParseFile.cpp	/^bool CParseFile::LoadFile(int argc, char *argv[])$/;"	f	class:CParseFile
+LoadMatrixFromFile	ParaSWParam.cpp	/^bool SubstitutionMatrix::LoadMatrixFromFile(char fileName[],int matrix_type)$/;"	f	class:SubstitutionMatrix
+LoadSequenceFromFile	ParaSWParam.cpp	/^bool Sequence::LoadSequenceFromFile(char fileName[],int sequenceType,SubstitutionMatrix *subMatrix)$/;"	f	class:Sequence
+MAX_GRID_COLS	ParaSWProblem.h	166;"	d
+MAX_GRID_ROWS	ParaSWProblem.h	165;"	d
+NODE_UNREACHABLE	ParaSWParam.h	27;"	d
+Node	ParaSWProblem.cpp	/^Node::Node()$/;"	f	class:Node
+Node	ParaSWProblem.h	/^class Node$/;"	c
+NodeArray	ParaSWProblem.cpp	/^NodeArray::NodeArray()$/;"	f	class:NodeArray
+NodeArray	ParaSWProblem.h	/^class NodeArray$/;"	c
+Node_length	ParaSWProblem.h	29;"	d
+OBJS	Makefile	/^OBJS = wtime.o ParseFile.o ParallelSWAlgorithm.o ParaSWProcessorSet.o ParaSWProblem.o ParaSWPath.o ParaSWParam.o ParaSWGlobalMemory.o ParallelSW.o Debug.o $/;"	m
+OUTPUT	Makefile	/^OUTPUT = .\/parasw$/;"	m
+ParaSW	ParallelSWAlgorithm.cpp	/^ParaSWPath* ParaSW(ParaSWParam &param)$/;"	f
+ParaSWGlobalMemory	ParaSWGlobalMemory.cpp	/^ParaSWGlobalMemory::ParaSWGlobalMemory()$/;"	f	class:ParaSWGlobalMemory
+ParaSWGlobalMemory	ParaSWGlobalMemory.h	/^class ParaSWGlobalMemory  $/;"	c
+ParaSWGridBlockDivision	ParaSWParam.cpp	/^ParaSWGridBlockDivision::ParaSWGridBlockDivision()$/;"	f	class:ParaSWGridBlockDivision
+ParaSWGridBlockDivision	ParaSWParam.h	/^class ParaSWGridBlockDivision{$/;"	c
+ParaSWParam	ParaSWParam.cpp	/^ParaSWParam::ParaSWParam()$/;"	f	class:ParaSWParam
+ParaSWParam	ParaSWParam.h	/^class ParaSWParam  $/;"	c
+ParaSWPath	ParaSWPath.cpp	/^ParaSWPath::ParaSWPath()$/;"	f	class:ParaSWPath
+ParaSWPath	ParaSWPath.h	/^class ParaSWPath  $/;"	c
+ParaSWPathGrid	ParaSWPath.cpp	/^ParaSWPathGrid::ParaSWPathGrid()$/;"	f	class:ParaSWPathGrid
+ParaSWPathGrid	ParaSWPath.h	/^class ParaSWPathGrid$/;"	c
+ParaSWPathGridList	ParaSWPath.cpp	/^ParaSWPathGridList::ParaSWPathGridList()$/;"	f	class:ParaSWPathGridList
+ParaSWPathGridList	ParaSWPath.h	/^class ParaSWPathGridList$/;"	c
+ParaSWProblem	ParaSWProblem.cpp	/^ParaSWProblem::ParaSWProblem()$/;"	f	class:ParaSWProblem
+ParaSWProblem	ParaSWProblem.h	/^class ParaSWProblem  $/;"	c
+ParaSWProcessor	ParaSWProcessorSet.cpp	/^ParaSWProcessor::ParaSWProcessor()$/;"	f	class:ParaSWProcessor
+ParaSWProcessor	ParaSWProcessorSet.h	/^class ParaSWProcessor$/;"	c
+ParaSWProcessorList	ParaSWProcessorSet.cpp	/^ParaSWProcessorList::ParaSWProcessorList()$/;"	f	class:ParaSWProcessorList
+ParaSWProcessorList	ParaSWProcessorSet.h	/^class ParaSWProcessorList$/;"	c
+ParaSWProcessorListNode	ParaSWProcessorSet.h	/^struct ParaSWProcessorListNode$/;"	s
+ParaSWProcessorSet	ParaSWProcessorSet.cpp	/^ParaSWProcessorSet::ParaSWProcessorSet()$/;"	f	class:ParaSWProcessorSet
+ParaSWProcessorSet	ParaSWProcessorSet.h	/^class ParaSWProcessorSet$/;"	c
+ParaSWReadyTask	ParaSWProblem.h	/^class ParaSWReadyTask$/;"	c
+ParaSWReadyTaskArray	ParaSWProblem.cpp	/^ParaSWReadyTaskArray::ParaSWReadyTaskArray()$/;"	f	class:ParaSWReadyTaskArray
+ParaSWReadyTaskArray	ParaSWProblem.h	/^class ParaSWReadyTaskArray$/;"	c
+Point	ParaSWPath.h	/^struct Point{$/;"	s
+PopFromTaskQueue	ParaSWPath.cpp	/^ParaSWPathGrid* ParaSWPath::PopFromTaskQueue()$/;"	f	class:ParaSWPath
+Position	ParaSWProblem.h	/^struct Position$/;"	s
+PrintAlignment	Debug.cpp	/^void CDebug::PrintAlignment(ParaSWPath *path,char *title)$/;"	f	class:CDebug
+PrintAlignment	Debug.cpp	/^void CDebug::PrintAlignment(char* seq1,char* seq2,char* consensus,int length,char *title)$/;"	f	class:CDebug
+PrintCheckPoint	Debug.cpp	/^void CDebug::PrintCheckPoint(int i,int j,ParaSWParam *param,char *title)$/;"	f	class:CDebug
+PrintMatrixBound	Debug.cpp	/^void CDebug::PrintMatrixBound(Bound *m,int row,int col,char *title)$/;"	f	class:CDebug
+PrintMatrixInt	Debug.cpp	/^void CDebug::PrintMatrixInt(int *m, int row, int col,char *title)$/;"	f	class:CDebug
+PrintMatrixInt2D	Debug.cpp	/^void CDebug::PrintMatrixInt2D(int **m, int row, int col, char *title)$/;"	f	class:CDebug
+PrintMatrixNode1D	Debug.cpp	/^void CDebug::PrintMatrixNode1D(Node *m,int row,char* title)$/;"	f	class:CDebug
+PrintMatrixNode2D	Debug.cpp	/^void CDebug::PrintMatrixNode2D(Node **m, int row, int col, char *title)$/;"	f	class:CDebug
+PrintMatrixNode2D	Debug.cpp	/^void CDebug::PrintMatrixNode2D(Node **m, int row, int col,int offset_col, char *title)$/;"	f	class:CDebug
+PrintParaSWGridBlockDivision	Debug.cpp	/^void CDebug::PrintParaSWGridBlockDivision(ParaSWGridBlockDivision &pd, char *title)$/;"	f	class:CDebug
+PrintParaSWParam	Debug.cpp	/^void CDebug::PrintParaSWParam(ParaSWParam *param,char *title)$/;"	f	class:CDebug
+PrintParaSWProcessors	Debug.cpp	/^void CDebug::PrintParaSWProcessors(ParaSWProcessorList *pList,char *title)$/;"	f	class:CDebug
+PrintPath	Debug.cpp	/^void CDebug::PrintPath(ParaSWPath *path,char *title)$/;"	f	class:CDebug
+PrintPathGrid	Debug.cpp	/^void CDebug::PrintPathGrid(ParaSWPathGrid *pg, char *title)$/;"	f	class:CDebug
+PrintPoint	Debug.cpp	/^void CDebug::PrintPoint(int i, int j, char *title)$/;"	f	class:CDebug
+PrintSeparator	Debug.cpp	/^void CDebug::PrintSeparator(char *title1,char *title2)$/;"	f	class:CDebug
+PrintTitle	Debug.cpp	/^void CDebug::PrintTitle(char *title1,char *title2)$/;"	f	class:CDebug
+PushIntoResultQueue	ParaSWPath.cpp	/^void ParaSWPath::PushIntoResultQueue(ParaSWPathGrid* pg)$/;"	f	class:ParaSWPath
+PushIntoTaskQueue	ParaSWPath.cpp	/^void ParaSWPath::PushIntoTaskQueue(ParaSWPathGrid* pg)$/;"	f	class:ParaSWPath
+RecycleProcessors	ParaSWProcessorSet.cpp	/^bool ParaSWProcessorSet::RecycleProcessors(ParaSWProcessorList &targetList)$/;"	f	class:ParaSWProcessorSet
+ReleaseData	ParseFile.cpp	/^void CParseFile::ReleaseData()$/;"	f	class:CParseFile
+ReleaseGridBlockDivision	ParaSWParam.cpp	/^void ParaSWGridBlockDivision::ReleaseGridBlockDivision()$/;"	f	class:ParaSWGridBlockDivision
+ReleaseGridCache	ParaSWProblem.cpp	/^bool ParaSWProblem::ReleaseGridCache()$/;"	f	class:ParaSWProblem
+ReleaseProblem	ParaSWProblem.cpp	/^bool ParaSWProblem::ReleaseProblem()$/;"	f	class:ParaSWProblem
+Release_Mem	Common.h	22;"	d
+Release_Mem	Common.h	68;"	d
+Release_Mem2D	Common.h	25;"	d
+Release_Mem2D	Common.h	74;"	d
+Release_Mem2D_0	Common.h	28;"	d
+Release_Mem2D_0	Common.h	77;"	d
+Release_Mem2D_1	Common.h	37;"	d
+Release_Mem2D_1	Common.h	81;"	d
+Release_Mem_1	Common.h	42;"	d
+Release_Mem_1	Common.h	86;"	d
+Release_Mem_2	Common.h	23;"	d
+Release_Mem_2	Common.h	69;"	d
+Release_Object	Common.h	24;"	d
+Release_Object	Common.h	70;"	d
+ResetBlockLocalCol	ParaSWProblem.cpp	/^bool ParaSWProblem::ResetBlockLocalCol(bool isSW)		\/\/for first column on grid, reset local_start for first column, before fill block$/;"	f	class:ParaSWProblem
+ResetBlockLocalRow	ParaSWProblem.cpp	/^bool ParaSWProblem::ResetBlockLocalRow(bool isSW)		\/\/for first row on grid, reset local_start for first row, before fill block$/;"	f	class:ParaSWProblem
+ScoreMatrix	ParaSWProcessorSet.h	/^	Node **ScoreMatrix;			\/\/temporary storage: blockMaxHeight * blockMaxWidth$/;"	m	class:ParaSWProcessor
+SearchPositionGrid	ParaSWParam.cpp	/^bool ParaSWGridBlockDivision::SearchPositionGrid(Position &pos,bool &isOnRows,int &i,int &j)$/;"	f	class:ParaSWGridBlockDivision
+SendBackProcessors	ParaSWProblem.cpp	/^bool ParaSWProblem::SendBackProcessors(ParaSWProcessorSet &pSet)$/;"	f	class:ParaSWProblem
+Sequence	ParaSWParam.cpp	/^Sequence::Sequence()$/;"	f	class:Sequence
+Sequence	ParaSWParam.h	/^class Sequence{$/;"	c
+SetData	ParaSWProblem.cpp	/^bool Node::SetData(int k, ... )$/;"	f	class:Node
+SetOneData	ParaSWProblem.cpp	/^bool Node::SetOneData(int n,int s,char t)$/;"	f	class:Node
+SetOneStartPosition	ParaSWProblem.cpp	/^bool Node::SetOneStartPosition(int n,Node &preNode,int m)$/;"	f	class:Node
+SetOneStartPosition	ParaSWProblem.cpp	/^bool Node::SetOneStartPosition(int n,bool isGlobal,int i,int j,char k)$/;"	f	class:Node
+SetStartPosition	ParaSWProblem.cpp	/^bool Node::SetStartPosition(bool isGlobal, ... )$/;"	f	class:Node
+SetStartPositionHere	ParaSWProblem.cpp	/^bool Node::SetStartPositionHere(int h,int w)$/;"	f	class:Node
+SolveFullMatrix	ParallelSWAlgorithm.cpp	/^ParaSWPathGrid** SolveFullMatrix(ParaSWProblem *problem,bool isSW)$/;"	f
+SolveFullMatrix_nw	ParallelSWAlgorithm.cpp	/^ParaSWPathGrid** SolveFullMatrix_nw(ParaSWProblem *problem)	\/\/result is saving in the path_grid$/;"	f
+SolveFullMatrix_sw	ParallelSWAlgorithm.cpp	/^ParaSWPathGrid** SolveFullMatrix_sw(ParaSWProblem *problem)	\/\/result is saving in the path_grid$/;"	f
+SortSolvedPath	ParaSWPath.cpp	/^bool ParaSWPath::SortSolvedPath()$/;"	f	class:ParaSWPath
+SubstitutionMatrix	ParaSWParam.cpp	/^SubstitutionMatrix::SubstitutionMatrix()$/;"	f	class:SubstitutionMatrix
+SubstitutionMatrix	ParaSWParam.h	/^class SubstitutionMatrix{$/;"	c
+TRACE_HERE	ParaSWParam.h	21;"	d
+TRACE_LEFT	ParaSWParam.h	23;"	d
+TRACE_UP	ParaSWParam.h	24;"	d
+TRACE_UPLEFT	ParaSWParam.h	22;"	d
+TRACE_UPLEFTPOS	ParaSWParam.h	25;"	d
+TRACE_s_AFF_E	ParaSWParam.h	30;"	d
+TRACE_s_AFF_F	ParaSWParam.h	31;"	d
+TRACE_s_AFF_H	ParaSWParam.h	29;"	d
+TRACE_s_AFF_HERE	ParaSWParam.h	28;"	d
+TryAddBigNode	ParaSWProblem.cpp	/^bool NodeArray::TryAddBigNode(Node &n,int h,int w)$/;"	f	class:NodeArray
+TryGetProcessors	ParaSWProblem.cpp	/^bool ParaSWProblem::TryGetProcessors(ParaSWProcessorSet &pSet)$/;"	f	class:ParaSWProblem
+TrySimpleSolvePathGrid	ParaSWPath.cpp	/^bool ParaSWPathGrid::TrySimpleSolvePathGrid()$/;"	f	class:ParaSWPathGrid
+UP	ParaSWPath.h	32;"	d
+UPLEFT	ParaSWPath.h	30;"	d
+_COMMON_H	Common.h	7;"	d
+__Parallel_SW_Algorithm__	ParallelSWAlgorithm.h	2;"	d
+_num_procs	ParallelSW.cpp	/^int _num_procs;$/;"	v
+ali	ParaSWPath.h	/^	char* ali;$/;"	m	class:ParaSWPath
+alignFree	Debug.cpp	/^void alignFree(void * p)$/;"	f
+alignMalloc	Debug.cpp	/^char *alignMalloc( int len  )$/;"	f
+align_type	ParaSWParam.h	/^	int		 align_type; \/\/FASTLSA_DNA|ParaSW_PROTEIN; ParaSW_NW|ParaSW_SW; ParaSW_AFFINE|ParaSW_CONST;$/;"	m	class:ParaSWParam
+bBackSeparate	ParaSWProblem.cpp	/^int bBackSeparate;$/;"	v
+b_isBlockProblem	ParaSWProblem.h	/^	bool b_isBlockProblem;	\/\/if is block problem, just use in the fill grid cache step$/;"	m	class:ParaSWProblem
+b_isMainProblem	ParaSWProblem.h	/^	bool b_isMainProblem;	\/\/if is main problem, us SW; else us NW$/;"	m	class:ParaSWProblem
+b_isSolvable	ParaSWProblem.h	/^	bool b_isSolvable;		\/\/if this problem solvable$/;"	m	class:ParaSWProblem
+beach	ParaSWProblem.h	/^	Node **beach;			\/\/ the beach line of row$/;"	m	class:BeachLine
+beachLine	ParaSWGlobalMemory.h	/^	Node *beachLine;$/;"	m	class:ParaSWGlobalMemory
+beachLineMem	ParaSWGlobalMemory.h	/^	Node *beachLineMem;$/;"	m	class:ParaSWGlobalMemory
+beach_front	ParaSWProblem.h	/^	int *beach_front;		\/\/ the beach front of each beach row, for the first line is 0, number of block$/;"	m	class:BeachLine
+big_count	ParaSWProblem.h	/^	int big_count;$/;"	m	class:NodeArray
+big_nodes	ParaSWProblem.h	/^	NodeArray big_nodes;	\/\/save the biggest nodes, for main problem only$/;"	m	class:ParaSWProblem
+blockHeightOnGrid	ParaSWParam.h	/^	int *blockHeightOnGrid;	\/\/if block's first row is on grid, ...OnGrid = 0x100 | i;$/;"	m	class:ParaSWGridBlockDivision
+blockHeights	ParaSWParam.h	/^	Bound *blockHeights;	\/\/bound of each block in h-direction, pos in global-logical-matrix, start at 0$/;"	m	class:ParaSWGridBlockDivision
+blockHeights_count	ParaSWParam.h	/^	int blockHeights_count;	\/\/number of grids in h-direction$/;"	m	class:ParaSWGridBlockDivision
+blockMaxHeight	ParaSWProcessorSet.h	/^	int blockMaxHeight;		\/\/max height of block, according to the speed of the processor$/;"	m	class:ParaSWProcessor
+blockMaxWidth	ParaSWProcessorSet.h	/^	int blockMaxWidth;		\/\/max width of block, according to the memory of the processor$/;"	m	class:ParaSWProcessor
+blockWidthOnGrid	ParaSWParam.h	/^	int *blockWidthOnGrid;	\/\/if block's last row is on grid, ...OnGrid = 0x200 | i;$/;"	m	class:ParaSWGridBlockDivision
+blockWidths	ParaSWParam.h	/^	Bound *blockWidths;		\/\/bound of each block in w-direction, pos in global-logical-matrix, start at 0$/;"	m	class:ParaSWGridBlockDivision
+blockWidths_count	ParaSWParam.h	/^	int blockWidths_count;	\/\/number of grids in w-direction$/;"	m	class:ParaSWGridBlockDivision
+block_Beach	ParaSWProblem.h	/^	BeachLine *block_Beach;			\/\/beach line of blocks$/;"	m	class:ParaSWProblem
+block_division	ParaSWProblem.h	/^	ParaSWGridBlockDivision *block_division;	\/\/the division of the blocks, for unSolved problems$/;"	m	class:ParaSWProblem
+block_height	ParaSWParam.h	/^	int     *block_height;\/\/block height of each processor, or the capability comparison of the processors$/;"	m	class:ParaSWParam
+block_width	ParaSWParam.h	/^	int     block_width; \/\/solvable block width of each processor, equal for all processors$/;"	m	class:ParaSWParam
+block_width	ParaSWProblem.h	/^	int block_width;$/;"	m	class:BeachLine
+block_width_count	ParaSWProblem.h	/^	int block_width_count;$/;"	m	class:BeachLine
+cacheNode	ParaSWProblem.h	/^	Node cacheNode;				\/\/left up point$/;"	m	class:ParaSWProblem
+count	ParaSWProcessorSet.h	/^	int count;$/;"	m	class:ParaSWProcessorSet
+data	ParaSWParam.h	/^	char *data;$/;"	m	class:Sequence
+data1	ParseFile.h	/^	Sequence *data1;$/;"	m	class:CParseFile
+data2	ParseFile.h	/^	Sequence *data2;$/;"	m	class:CParseFile
+dataMem	ParaSWParam.h	/^	char *dataMem;$/;"	m	class:Sequence
+debugFile	Debug.h	/^	FILE *debugFile;$/;"	m	class:CDebug
+debugf	ParallelSW.cpp	/^CDebug debugf;$/;"	v
+delta_score	ParaSWPath.h	/^	int delta_score;	\/\/score_end - score_start$/;"	m	class:ParaSWPathGrid
+dimension	ParaSWParam.h	/^	int dimension;     \/\/real dimension for DNA or Protein score matix$/;"	m	class:SubstitutionMatrix
+direction	ParaSWPath.h	/^	char *direction;	\/\/direction_len = points_len-1, from end to start point$/;"	m	class:ParaSWPathGrid
+elapsed	wtime.cpp	/^double start[64], elapsed[64];$/;"	v
+elapsed_time	wtime.cpp	/^double elapsed_time( void )$/;"	f
+end	ParaSWParam.h	/^	int end;$/;"	m	struct:Bound
+end	ParaSWPath.h	/^	Point end;			\/\/local end point (h,w) of global path$/;"	m	class:ParaSWPathGrid
+end_node	ParaSWPath.h	/^	Node end_node;		\/\/end Node$/;"	m	class:ParaSWPathGrid
+first	ParaSWPath.h	/^	ParaSWPathGrid *first;	\/\/first pointer of the list$/;"	m	class:ParaSWPathGridList
+first	ParaSWProcessorSet.h	/^	ParaSWProcessorListNode *first;	\/\/first pointer of the list$/;"	m	class:ParaSWProcessorList
+gMem	ParaSWProcessorSet.h	/^	ParaSWGlobalMemory *gMem;	\/\/temporary storage for grid cache and beach line on each processor$/;"	m	class:ParaSWProcessor
+gap_extend	ParaSWParam.h	/^	int     gap_extend; \/\/gap extension penalty$/;"	m	class:ParaSWParam
+gap_extend	ParaSWParam.h	/^	int gap_extend;$/;"	m	class:SubstitutionMatrix
+gap_open	ParaSWParam.h	/^	int		gap_open;   \/\/gap open penalty$/;"	m	class:ParaSWParam
+gap_open	ParaSWParam.h	/^	int gap_open;$/;"	m	class:SubstitutionMatrix
+getPathGrids	ParallelSWAlgorithm.cpp	/^bool getPathGrids(ParaSWProblem *problem, ParaSWPath *paths, bool isSW)$/;"	f
+getPathGrids_nw	ParallelSWAlgorithm.cpp	/^bool getPathGrids_nw(ParaSWProblem *problem, ParaSWPath *path)	\/\/save the new path grids for problem to path$/;"	f
+getPathGrids_sw	ParallelSWAlgorithm.cpp	/^bool getPathGrids_sw(ParaSWProblem *problem, ParaSWPath *paths)	\/\/save the new path grids for problem to paths$/;"	f
+global_param	ParaSWProblem.h	/^	ParaSWParam *global_param;	\/\/global parameters, point to outside memory$/;"	m	class:ParaSWProblem
+global_start	ParaSWProblem.h	/^	Position global_start[Node_length];	\/\/Start position: Sh,Se,Sf in global matrix, for computing the k-optimal paths \/\/all the positions are position in score matrix, 0 based$/;"	m	class:Node
+gridCols	ParaSWGlobalMemory.h	/^	Node **gridCols;$/;"	m	class:ParaSWGlobalMemory
+gridCols	ParaSWProblem.h	/^	Node *gridCols[MAX_GRID_COLS];$/;"	m	class:ParaSWProblem
+gridColsMem	ParaSWGlobalMemory.h	/^	Node *gridColsMem;$/;"	m	class:ParaSWGlobalMemory
+gridHeights	ParaSWParam.h	/^	Bound *gridHeights;		\/\/bound of each grid in h-direction, pos in global-logical-matrix, start at 0$/;"	m	class:ParaSWGridBlockDivision
+gridHeights_count	ParaSWParam.h	/^	int gridHeights_count;	\/\/number of grids in h-direction$/;"	m	class:ParaSWGridBlockDivision
+gridRows	ParaSWGlobalMemory.h	/^	Node **gridRows;$/;"	m	class:ParaSWGlobalMemory
+gridRows	ParaSWProblem.h	/^	Node *gridRows[MAX_GRID_ROWS];$/;"	m	class:ParaSWProblem
+gridRowsMem	ParaSWGlobalMemory.h	/^	Node *gridRowsMem;$/;"	m	class:ParaSWGlobalMemory
+gridWidths	ParaSWParam.h	/^	Bound *gridWidths;		\/\/bound of each grid in w-direction, pos in global-logical-matrix, start at 0$/;"	m	class:ParaSWGridBlockDivision
+gridWidths_count	ParaSWParam.h	/^	int gridWidths_count;	\/\/number of grids in w-direction$/;"	m	class:ParaSWGridBlockDivision
+grid_h_count	ParaSWGlobalMemory.h	/^	int grid_h_count;$/;"	m	class:ParaSWGlobalMemory
+grid_height_count	ParaSWParam.h	/^	int		grid_height_count;	\/\/one problem could have how many grid rows$/;"	m	class:ParaSWParam
+grid_w_count	ParaSWGlobalMemory.h	/^	int grid_w_count;$/;"	m	class:ParaSWGlobalMemory
+grid_width_count	ParaSWParam.h	/^	int		grid_width_count;	\/\/one problem could have how many grid cols$/;"	m	class:ParaSWParam
+i	ParaSWPath.h	/^	int i;$/;"	m	struct:Point
+i	ParaSWProblem.h	/^	int i;$/;"	m	struct:Position
+index	ParaSWParam.h	/^	int	*index;$/;"	m	class:Sequence
+index	ParaSWParam.h	/^	int index[26];$/;"	m	class:SubstitutionMatrix
+indexMem	ParaSWParam.h	/^	int *indexMem;$/;"	m	class:Sequence
+index_X	ParaSWParam.h	/^	int index_X,index_end;$/;"	m	class:SubstitutionMatrix
+index_end	ParaSWParam.h	/^	int index_X,index_end;$/;"	m	class:SubstitutionMatrix
+j	ParaSWPath.h	/^	int j;$/;"	m	struct:Point
+j	ParaSWProblem.h	/^	int j;$/;"	m	struct:Position
+k	ParaSWParam.h	/^	int		k;					\/\/ k nearest optimal paths$/;"	m	class:ParaSWParam
+length	ParaSWParam.h	/^	int length;$/;"	m	class:Sequence
+length	ParaSWPath.h	/^	int length;		\/\/length of seq1[], seq2[], and ali[]$/;"	m	class:ParaSWPath
+length_h	ParaSWGlobalMemory.h	/^	int length_h;$/;"	m	class:ParaSWGlobalMemory
+length_w	ParaSWGlobalMemory.h	/^	int length_w;;$/;"	m	class:ParaSWGlobalMemory
+local_index_seq1	ParaSWProblem.h	/^	int *local_index_seq1;	\/\/local sequence 1 index pointer, point to outside memory$/;"	m	class:ParaSWProblem
+local_index_seq2	ParaSWProblem.h	/^	int *local_index_seq2;	\/\/local sequence 2 index pointer, point to outside memory$/;"	m	class:ParaSWProblem
+local_start	ParaSWProblem.h	/^	Position local_start[Node_length];	\/\/Start position: Sh,Se,Sf in local block$/;"	m	class:Node
+main	ParallelSW.cpp	/^int main(int argc, char *argv[])$/;"	f
+matrix	ParseFile.h	/^	char matrix[100];$/;"	m	class:CParseFile
+max_dimension	ParaSWParam.h	/^	int max_dimension; \/\/max dimension$/;"	m	class:SubstitutionMatrix
+name	ParaSWParam.h	/^	char name[10];$/;"	m	class:SubstitutionMatrix
+next	ParaSWPath.h	/^	ParaSWPathGrid *next;	\/\/for list$/;"	m	class:ParaSWPathGrid
+next	ParaSWProcessorSet.h	/^	ParaSWProcessorListNode *next;$/;"	m	struct:ParaSWProcessorListNode
+node_count	ParaSWProblem.h	/^	int node_count;$/;"	m	class:NodeArray
+nodes	ParaSWProblem.h	/^	Node * nodes;$/;"	m	class:NodeArray
+operator !=	ParaSWProblem.cpp	/^bool Node::operator !=(Node& n1)$/;"	f	class:Node
+operator <	ParaSWPath.h	/^	bool operator < (Point &p) { return (i<=p.i && j<=p.j && !(i==p.i && j==p.j)); };$/;"	f	struct:Point
+operator =	ParaSWProblem.cpp	/^bool Node::operator =(Node& n1)$/;"	f	class:Node
+pHozScore	ParaSWProblem.h	/^	Node *pHozScore;				\/\/ eric, 2004.10.14$/;"	m	class:ParaSWProblem
+pHozScore	ParaSWProcessorSet.h	/^	Node *pHozScore;				\/\/ eric, 2004.10.14$/;"	m	class:ParaSWProcessor
+pVerScore	ParaSWProblem.h	/^	Node *pVerScore;				\/\/ eric, 2004.10.14$/;"	m	class:ParaSWProblem
+pVerScore	ParaSWProcessorSet.h	/^	Node *pVerScore;				\/\/ eric, 2004.10.14$/;"	m	class:ParaSWProcessor
+p_proc	ParaSWProcessorSet.h	/^	ParaSWProcessor *p_proc;$/;"	m	struct:ParaSWProcessorListNode
+pair	ParaSWParam.h	/^	int pair;$/;"	m	class:SubstitutionMatrix
+param	ParseFile.h	/^	ParaSWParam * param;	\/\/param used in Parallel SW$/;"	m	class:CParseFile
+pathID	ParaSWPath.h	/^	int pathID;			\/\/this path grid belongs to which path$/;"	m	class:ParaSWPathGrid
+path_grid	ParaSWProblem.h	/^	ParaSWPathGrid *path_grid;	\/\/local start and end points for this problem, point to outside memory$/;"	m	class:ParaSWProblem
+path_grid	ParaSWProblem.h	/^	ParaSWPathGrid *path_grid;	\/\/local start and end points for this problem, point to outside memory$/;"	m	class:ParaSWReadyTask
+path_grid	ParaSWProcessorSet.h	/^	ParaSWPathGrid *path_grid;$/;"	m	class:ParaSWProcessor
+points_len	ParaSWPath.h	/^	int points_len;		\/\/point length of the local path$/;"	m	class:ParaSWPathGrid
+positions	ParaSWProblem.h	/^	Position * positions;			\/\/position for each node$/;"	m	class:NodeArray
+pre_local_len2	ParaSWProcessorSet.h	/^	int pre_local_len2;		\/\/store the previous local length for fill block$/;"	m	class:ParaSWProcessor
+processorCount	ParaSWProcessorSet.h	/^	static int processorCount;		\/\/global count of processors$/;"	m	class:ParaSWProcessor
+processorCount	ParallelSW.cpp	/^int ParaSWProcessor::processorCount = 0;$/;"	m	class:ParaSWProcessor	file:
+processorID	ParaSWProcessorSet.h	/^	int processorID;		\/\/ID of this processor$/;"	m	class:ParaSWProcessor
+processorList	ParaSWProcessorSet.h	/^	ParaSWProcessorList processorList;$/;"	m	class:ParaSWProcessorSet
+processor_count	ParaSWParam.h	/^	int     processor_count; \/\/def = 1$/;"	m	class:ParaSWParam
+processor_list	ParaSWProblem.h	/^	ParaSWProcessorList processor_list;	\/\/list of processors, by the processor set$/;"	m	class:ParaSWProblem
+processor_list	ParaSWProblem.h	/^	ParaSWProcessorList processor_list;	\/\/list of processors, by the processor set$/;"	m	class:ParaSWReadyTask
+processors	ParaSWProblem.h	/^	ParaSWProcessor **processors;	\/\/pointer of each processor$/;"	m	class:ParaSWProblem
+processors	ParaSWProcessorSet.h	/^	ParaSWProcessor *processors;$/;"	m	class:ParaSWProcessorSet
+pssm	ParaSWParam.h	/^	SubstitutionMatrix * pssm;	\/\/position specific score matrix$/;"	m	class:ParaSWParam
+readyTasks	ParaSWProblem.h	/^	ParaSWReadyTask *readyTasks;$/;"	m	class:ParaSWReadyTaskArray
+readyTasks_count	ParaSWProblem.h	/^	int readyTasks_count;$/;"	m	class:ParaSWReadyTaskArray
+score	ParaSWParam.h	/^	int **score;$/;"	m	class:SubstitutionMatrix
+score	ParaSWProblem.h	/^	int score[Node_length];			\/\/Value: H(max),E(left),F(top)$/;"	m	class:Node
+scoreMatrix	ParaSWProblem.h	/^	Node **scoreMatrix;			\/\/whole score matrix$/;"	m	class:ParaSWProblem
+seq1	ParaSWParam.h	/^	Sequence *seq1;       \/\/File path or Data buff of seq1$/;"	m	class:ParaSWParam
+seq1	ParaSWPath.h	/^	char* seq1;		\/\/the final result for out put$/;"	m	class:ParaSWPath
+seq1	ParseFile.h	/^	char seq1[100];$/;"	m	class:CParseFile
+seq1_end	ParaSWPath.h	/^	int seq1_end;$/;"	m	class:ParaSWPath
+seq1_start	ParaSWPath.h	/^	int seq1_start;	\/\/start of seq1, 1 base$/;"	m	class:ParaSWPath
+seq2	ParaSWParam.h	/^	Sequence *seq2;       \/\/File path or Data buff of seq2$/;"	m	class:ParaSWParam
+seq2	ParaSWPath.h	/^	char* seq2;$/;"	m	class:ParaSWPath
+seq2	ParseFile.h	/^	char seq2[100];$/;"	m	class:CParseFile
+seq2_end	ParaSWPath.h	/^	int seq2_end;$/;"	m	class:ParaSWPath
+seq2_start	ParaSWPath.h	/^	int seq2_start;$/;"	m	class:ParaSWPath
+solvableMemSize	ParaSWParam.h	/^	int		solvableMemSize;	\/\/size of score matrix which could be solved directly, in trace step$/;"	m	class:ParaSWParam
+solvedPathGrids	ParaSWPath.h	/^	ParaSWPathGridList solvedPathGrids;			\/\/result$/;"	m	class:ParaSWPath
+start	ParaSWParam.h	/^	int start;$/;"	m	struct:Bound
+start	ParaSWPath.h	/^	Point start;		\/\/local start point (h,w) of global path, (h,w) is the position in the logical score matrix, 0 based$/;"	m	class:ParaSWPathGrid
+start	wtime.cpp	/^double start[64], elapsed[64];$/;"	v
+start_node	ParaSWPath.h	/^	Node start_node;	\/\/start Node$/;"	m	class:ParaSWPathGrid
+subMatrix	ParseFile.h	/^	SubstitutionMatrix *subMatrix;$/;"	m	class:CParseFile
+sub_problem	ParaSWProcessorSet.h	/^	ParaSWProblem *sub_problem;$/;"	m	class:ParaSWProcessor
+sub_problem_h	ParaSWProcessorSet.h	/^	int sub_problem_h;$/;"	m	class:ParaSWProcessor
+sub_problem_w	ParaSWProcessorSet.h	/^	int sub_problem_w;		\/\/the current block number (h,w) of this sub problem$/;"	m	class:ParaSWProcessor
+timer_clear	wtime.cpp	/^void timer_clear( int n )$/;"	f
+timer_read	wtime.cpp	/^double timer_read( int n )$/;"	f
+timer_start	wtime.cpp	/^void timer_start( int n )$/;"	f
+timer_stop	wtime.cpp	/^void timer_stop( int n )$/;"	f
+tmp_next_proc	ParaSWProcessorSet.h	/^	int tmp_next_proc;		\/\/pos of next processor in a local processor list$/;"	m	class:ParaSWProcessor
+total_number	ParaSWProblem.h	/^	int total_number;$/;"	m	class:ParaSWReadyTaskArray
+trace	ParaSWProblem.h	/^	char trace[4];$/;"	m	class:Node
+trace_num	ParaSWPath.h	/^	int trace_num;		\/\/trace from which status of the end node$/;"	m	class:ParaSWPathGrid
+trace_start	ParaSWProblem.h	/^	char trace_start[4];		\/\/Local start tracing direction: local_start[i] come from which status$/;"	m	class:Node
+type	ParaSWParam.h	/^	int type;		\/\/sequence is DNA\/RNA or protein$/;"	m	class:Sequence
+unSolvedPathGrids	ParaSWPath.h	/^	ParaSWPathGridList unSolvedPathGrids;		\/\/tasks for fill grid cache$/;"	m	class:ParaSWPath
+unpair	ParaSWParam.h	/^	int unpair;$/;"	m	class:SubstitutionMatrix
+wtime	wtime.cpp	/^void wtime(double *t)$/;"	f
+~BeachLine	ParaSWProblem.cpp	/^BeachLine::~BeachLine()$/;"	f	class:BeachLine
+~CDebug	Debug.cpp	/^CDebug::~CDebug()$/;"	f	class:CDebug
+~CParseFile	ParseFile.cpp	/^CParseFile::~CParseFile()$/;"	f	class:CParseFile
+~Node	ParaSWProblem.cpp	/^Node::~Node()$/;"	f	class:Node
+~NodeArray	ParaSWProblem.cpp	/^NodeArray::~NodeArray()$/;"	f	class:NodeArray
+~ParaSWGlobalMemory	ParaSWGlobalMemory.cpp	/^ParaSWGlobalMemory::~ParaSWGlobalMemory()$/;"	f	class:ParaSWGlobalMemory
+~ParaSWGridBlockDivision	ParaSWParam.cpp	/^ParaSWGridBlockDivision::~ParaSWGridBlockDivision()$/;"	f	class:ParaSWGridBlockDivision
+~ParaSWParam	ParaSWParam.cpp	/^ParaSWParam::~ParaSWParam()$/;"	f	class:ParaSWParam
+~ParaSWPath	ParaSWPath.cpp	/^ParaSWPath::~ParaSWPath()$/;"	f	class:ParaSWPath
+~ParaSWPathGrid	ParaSWPath.cpp	/^ParaSWPathGrid::~ParaSWPathGrid()$/;"	f	class:ParaSWPathGrid
+~ParaSWPathGridList	ParaSWPath.cpp	/^ParaSWPathGridList::~ParaSWPathGridList()$/;"	f	class:ParaSWPathGridList
+~ParaSWProblem	ParaSWProblem.cpp	/^ParaSWProblem::~ParaSWProblem()$/;"	f	class:ParaSWProblem
+~ParaSWProcessor	ParaSWProcessorSet.cpp	/^ParaSWProcessor::~ParaSWProcessor()$/;"	f	class:ParaSWProcessor
+~ParaSWProcessorList	ParaSWProcessorSet.cpp	/^ParaSWProcessorList::~ParaSWProcessorList()$/;"	f	class:ParaSWProcessorList
+~ParaSWProcessorSet	ParaSWProcessorSet.cpp	/^ParaSWProcessorSet::~ParaSWProcessorSet()$/;"	f	class:ParaSWProcessorSet
+~ParaSWReadyTaskArray	ParaSWProblem.cpp	/^ParaSWReadyTaskArray::~ParaSWReadyTaskArray()$/;"	f	class:ParaSWReadyTaskArray
+~Sequence	ParaSWParam.cpp	/^Sequence::~Sequence()$/;"	f	class:Sequence
+~SubstitutionMatrix	ParaSWParam.cpp	/^SubstitutionMatrix::~SubstitutionMatrix()$/;"	f	class:SubstitutionMatrix

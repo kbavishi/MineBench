@@ -1,0 +1,33 @@
+# STOCKHOLM 1.0
+
+#=GS B.subtilis DE B.subtilis RNaseP from RNaseP database
+
+B.subtilis           GUUCUUAACGUUCGGGUAAUCGCUGCAGAUCUUGAAUCUGUAGAGGAAAG
+#=GR B.subtilis   SS ....>>>>>>>>>>>>>>>>>.>>>>>>>>.....<<<<<<<<....BBB
+
+B.subtilis           UCCAUGCUCGCACGGUGCUGAGAUGCCCGUAGUGUUCGUGCCUAGCGAAG
+#=GR B.subtilis   SS .BBBBB>>>>>>>>>.>>......<<<<<<.....>>>.>>>>>>>....
+
+B.subtilis           UCAUAAGCUAGGGCAGUCUUUAGAGGCUGACGGCAGGAAAAAAGCCUACG
+#=GR B.subtilis   SS ......<<<<<<>>>>>>>....<<<<<<.<>>.>>>>.....>>>...>
+
+B.subtilis           UCUUCGGAUAUGGCUGAGUAUCCUUGAAAGUGCCACAGUGACGAAGUCUC
+#=GR B.subtilis   SS >>....<<<..<<<......<<<<.....>>>>>............>>>>
+
+B.subtilis           ACUAGAAAUGGUGAGAGUGGAACGCGGUAAACCCCUCGAGCGAGAAACCC
+#=GR B.subtilis   SS >>>>....<<<<<<<<.........<<<..<<<<<.<<<<<<<<...>>>
+
+B.subtilis           AAAUUUUGGUAGGGGAACCUUCUUAACGGAAUUCAACGGAGAGAAGGACA
+#=GR B.subtilis   SS ...........<<<...>>>>>>>................<<<<<<<>>>
+
+B.subtilis           GAAUGCUUUCUGUAGAUAGAUGAUUGCCGCCUGAGUACGAGGUGAUGAGC
+#=GR B.subtilis   SS >>>....<<<<<<........<<<<<<<.>>...>>>>>.>>>.....<<
+
+B.subtilis           CGUUUGCAGUACGAUGGAACAAAACAUGGCUUACAGAACGUUAGACCACU
+#=GR B.subtilis   SS <.<.....<<<<...<<.......bbbbbbbb.<.<<<<<<<<<......
+
+B.subtilis           U
+#=GR B.subtilis   SS .
+
+
+//

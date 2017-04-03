@@ -1,0 +1,27 @@
+# $Id: NJ.args,v 1.3 2005-10-20 15:24:43 eyalprivman Exp $ this looks better as -*- csh -*-
+
+package "NJ with itarative side information"
+purpose "reconstraction of phylogenetic trees when rates very among sites"
+version "0.9"
+
+option  "ratesFilename"			R	"Name of file containing the rates of the corresponding sequence file"	string  typestr="FILENAME"	no
+option  "dontOptimizeBranchLengths"	B	"Don't optimize branch lengths"	flag	off
+option  "dontIterate"			I	"Don't do iterative NJ"			flag	off
+
+section "Distance estimation methods to run"
+
+section "pairwise distance estimation methods"
+#defgroup "Methods"  groupdesc="Method type"
+# option  "pD"		-	"p-Distance"					flag off 
+# option  "jc"		-	"Jukes and Kantor distance"			flag off 
+# option  "homogeneous"	-	"homogeneous MLE distance"			flag off 
+# option  "pairwiseGamma"	-	"Gamma-ASRV with alpha optimized for each pair"	flag off 
+# option  "allPairwise"	-	"use all distance estimation methods that do not utilize side information"		flag off
+
+# section "Distance estimation methods that utilize side information"
+# option  "asrvExactGamma"		-	"Exact Gamma-ASRV, given alpha (must give alpha parameter)"	flag off 
+# option  "asrvGivenAlpha"	-	"Gamma-ASRV, given alpha (must give alpha parameter)"	flag off 
+# option  "asrvGivenRates"	-	"ASRV, given the rates (must give ratesFilename parameter)"	flag off
+# option  "posterior"	-	"Gamma-ASRV with posterior probs based on given tree and tree sequences"		flag off
+# option  "all"		-	"use all distance estimation methods"				flag off
+
