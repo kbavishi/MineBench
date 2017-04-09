@@ -34,5 +34,5 @@ SNP:
 	$(MAKE) -C SNP/pnl.snp/snp
 
 $(TAR_FILES):
-	ls datasets || mkdir datasets
+	mkdir -p datasets
 	cd datasets && (ls $@ || ((cp $(DATASETS_PATH)/$@ . || wget $(URL)$@) && tar -xzf $@))
