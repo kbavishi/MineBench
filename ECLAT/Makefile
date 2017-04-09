@@ -9,13 +9,7 @@ OBJS	= Itemset.o Array.o Eqclass.o HashTable.o \
 LIBS = -lm -lc
 TARGET  = eclat
 
-default:	$(TARGET) dataset
-
-dataset: 
-	ls ECLAT.tar.gz || \
-		(wget http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/ECLAT.tar.gz && \
-		 tar -xvzf ECLAT.tar.gz)
-
+default:	$(TARGET)
 
 clean:
 	rm -rf *~ *.o $(TARGET)

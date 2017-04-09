@@ -23,7 +23,7 @@ OBJ         = $(SRC:%.c=%.o)
 .c.o:
 	$(CC) $(CFLAGS) -c $<
 
-all: example dataset
+all: example
 
 example: $(OBJ) $(H_FILES)
 	$(CC) $(OPTFLAGS) -o example $(OBJ) $(LDFLAGS)
@@ -31,10 +31,6 @@ example: $(OBJ) $(H_FILES)
 endian: endian.c
 	$(CC) $(OPTFLAGS) -o endian endian.c
 
-dataset: 
-	ls kmeans.tar.gz || \
-		(wget http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/kmeans.tar.gz && \
-		 tar -xvzf kmeans.tar.gz)
 clean:
 	rm -rf *.o example endian core* .make.state \
 	       *.cluster_assign \
