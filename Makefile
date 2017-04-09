@@ -5,10 +5,16 @@ SUBDIRS += ParETI
 
 TAR_FILES = ETI.tar.gz HOP.tar.gz kmeans.tar.gz PLSA.tar.gz
 TAR_FILES += ScalParC.tar.gz semphy.tar.gz SNP.tar.gz SVM-RFE.tar.gz
-TAR_FILES += utility_mine.tar.gz 
+#TAR_FILES += utility_mine.tar.gz 
 URL = http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/
 
+DATASETS_PATH = /proj/netopt-PG0/datasets
+
 .PHONY: all $(SUBDIRS) RSEARCH SNP
+
+# XXX-kbavishi: Unable to compile SNP/pnl.snp/PNL for some reason. Comment out
+# for now.
+#all: $(SUBDIRS) $(TAR_FILES) RSEARCH SNP
 
 all: $(SUBDIRS) $(TAR_FILES) RSEARCH SNP
 
@@ -22,11 +28,11 @@ RSEARCH:
 	$(MAKE) -C $@
 
 SNP:
-	cd SNP/pnl.snp/PNL && ./configue CC=gcc CXX=g++ && $(MAKE) && cd ../../.. 
+	cd SNP/pnl.snp/PNL && (ls Makefile || ./configure CC=gcc CXX=g++ && $(MAKE))
+	cd ../../.. 
 	$(MAKE) -C SNP/pnl.snp/snp
 
 $(TAR_FILES):
 	ls datasets || mkdir datasets
-	cd datasets
-	ls $@ || (wget $(URL)$@ && tar -xvzf $@)
+	cd datasets && (ls $@ || (cp $(DATASETS_PATH)/$@ . || wget $(URL)$@) && tar -xvzf $@)
 	cd ..
