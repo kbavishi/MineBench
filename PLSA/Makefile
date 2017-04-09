@@ -18,7 +18,7 @@ $(OUTPUT):$(OBJS)
 clean: 
 	rm -f $(OBJS) $(OUTPUT)
 
-all: clear $(OUTPUT)
+all: clear $(OUTPUT) dataset
 .SUFFIXES:
 .SUFFIXES:  .c .o .cpp
 
@@ -27,3 +27,8 @@ all: clear $(OUTPUT)
 
 .c.o:
 	$(CCOMPILE) -c $(COMPILEOPTION) $(INCLUDEDIR) $<
+
+dataset: 
+	ls PLSA.tar.gz || \
+		(wget http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/PLSA.tar.gz && \
+		 tar -xvzf PLSA.tar.gz)

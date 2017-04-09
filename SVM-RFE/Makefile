@@ -14,7 +14,7 @@ LIBDIRS =
 OBJS = wtime.o svm.o svm_rfe.o svm_rfe_test.o
 OUTPUT = ./svm_mkl
 ################OPTION END################
-all: $(OUTPUT)
+all: $(OUTPUT) dataset
 
 $(OUTPUT):$(OBJS)
 	$(LINK) $(OBJS) $(LINKOPTION) $(LIBS) $(LIBDIRS)
@@ -25,6 +25,11 @@ $(OUTPUT):$(OBJS)
 
 .c.o:
 	$(CCOMPILE) -c $(COMPILEOPTION) $(INCLUDEDIR) $<
+
+dataset: 
+	ls SVM-RFE.tar.gz || \
+		(wget http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/SVM-RFE.tar.gz && \
+		 tar -xvzf SVM-RFE.tar.gz)
 
 clean: 
 	rm -f $(OBJS)

@@ -1,4 +1,5 @@
-SUBDIRS = Apriori ECLAT KMeans
+SUBDIRS = Apriori HOP KMeans PLSA RSEARCH
+SUBDIRS += ScalParC SEMPHY SNP SVM-RFE Utility_Mining ParETI
 
 .PHONY: subdirs $(SUBDIRS)
 
