@@ -78,7 +78,7 @@ HDRS  = funcs.h\
 #################################################################
 ## Targets defining how to make RSEARCH executables.
 ##
-all: 	dataset
+all: 	
 	(cd squid; make CC="$(CC)" CFLAGS="$(CFLAGS)"; make module)
 	make progs
 
@@ -108,11 +108,6 @@ distclean:
 binclean: 
 	make clean
 	-rm -f @ALLPROGS@ squid/libsquid.a
-
-dataset: 
-	ls rsearch.tar.gz || \
-		(wget http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/rsearch.tar.gz && \
-		 tar -xvzf rsearch.tar.gz)
 
 clean:
 	-rm -f *.o *~ Makefile.bak core TAGS gmon.out 

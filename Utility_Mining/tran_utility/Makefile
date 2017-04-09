@@ -9,7 +9,7 @@ LIBS = -lm
 
 TARGET  = utility_mine 
 
-default:	$(TARGET) dataset
+default:	$(TARGET)
 
 clean:
 	rm -rf *~ *.o $(TARGET)
@@ -29,9 +29,4 @@ ListItemset.o: ListItemset.cc ListItemset.h
 
 HashTree.o: HashTree.cc HashTree.h
 	$(CXX) $(CFLAGS) $(OPTS) -c HashTree.cc
-
-dataset: 
-	ls utility_mine.tar.gz || \
-		(wget http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/utility_mine.tar.gz && \
-		 tar -xvzf utility_mine.tar.gz)
 

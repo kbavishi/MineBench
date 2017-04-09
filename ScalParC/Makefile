@@ -10,7 +10,7 @@ LIBS = -lm
 TARGET = scalparc
 OBJ  = drive.o getdata.o parsort.o parclass.o
 
-all: $(TARGET) dataset
+all: $(TARGET)
 
 $(TARGET): $(OBJ)
 	$(CC) -o $@ $(LINKFLAGS) $(OBJ) $(LIBS)
@@ -19,9 +19,5 @@ $(TARGET): $(OBJ)
 .c.o: 
 	$(CC) -c $(CFLAGS) $*.c
 
-dataset: 
-	ls ScalParC.tar.gz || \
-		(wget http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/ScalParC.tar.gz && \
-		 tar -xvzf ScalParC.tar.gz)
 clean:
 	rm -f $(TARGET) $(OBJ)

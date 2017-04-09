@@ -1,7 +1,7 @@
 # CXX = icpc -openmp
 CXX = g++ -fopenmp
 
-all: snp dataset
+all: snp
 
 PNLD=../PNL
 
@@ -19,9 +19,5 @@ LIBS = $(PNLLIBPATH)/libpnl.a $(PNLD)/cxcore/cxcore/src/libcxcore.a -lm
 snp: testSL_omp.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@ $(LIBS)
 
-dataset: 
-	ls SNP.tar.gz || \
-		(wget http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/SNP.tar.gz && \
-		 tar -xvzf SNP.tar.gz)
 clean:
 	rm -f $(OBJS) snp 

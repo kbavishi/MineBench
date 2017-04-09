@@ -1,6 +1,6 @@
 .PHONY: all lib semphy programs clean install
 
-all: lib programs dataset
+all: lib programs
 
 debug: lib.debug
 
@@ -19,11 +19,6 @@ semphy: programs.semphy
 install: programs.install
 
 programs.install programs.all semphy: lib
-
-dataset: 
-	ls semphy.tar.gz || \
-		(wget http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/semphy.tar.gz && \
-		 tar -xvzf semphy.tar.gz)
 
 clean: lib.clean programs.clean
 
