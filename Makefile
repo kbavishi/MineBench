@@ -35,4 +35,4 @@ SNP:
 
 $(TAR_FILES):
 	ls datasets || mkdir datasets
-	cd datasets && (ls $@ || ((cp $(DATASETS_PATH)/$@ . || wget $(URL)$@) && tar -xvzf $@))
+	cd datasets && (ls $@ || ((cp $(DATASETS_PATH)/$@ . || wget $(URL)$@) && tar -xzf $@))
