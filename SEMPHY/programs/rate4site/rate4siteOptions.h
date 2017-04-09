@@ -30,6 +30,7 @@
 
 #include <string>
 #include <fstream>
+#include <getopt.h>
 using namespace std;
 
 class rate4siteOptions{
