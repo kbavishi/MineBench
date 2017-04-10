@@ -3,7 +3,7 @@ SUBDIRS += ScalParC SEMPHY SVM-RFE
 SUBDIRS += Utility_Mining/tran_utility Utility_Mining/para_tran_utility
 SUBDIRS += ParETI
 
-TAR_FILES = ETI.tar.gz HOP.tar.gz kmeans.tar.gz PLSA.tar.gz
+TAR_FILES = ETI.tar.gz HOP.tar.gz kmeans.tar.gz PLSA.tar.gz rsearch.tar.gz
 TAR_FILES += ScalParC.tar.gz semphy.tar.gz SNP.tar.gz SVM-RFE.tar.gz
 #TAR_FILES += utility_mine.tar.gz 
 URL = http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/
