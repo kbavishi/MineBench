@@ -38,4 +38,4 @@ SNP:
 $(TAR_FILES):
 	mkdir -p datasets
 	ls $(DATASETS_PATH)/$@ || (cd $(DATASETS_PATH) && wget $(URL)$@)
-	ls datasets/${@,%.tar.gz,} || tar -xzf $(DATASETS_PATH)/$@ -C datasets/
+	ls datasets/$(subst .tar.gz,,$@) || tar -xzf $(DATASETS_PATH)/$@ -C datasets/
