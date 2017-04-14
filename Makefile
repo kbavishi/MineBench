@@ -1,10 +1,11 @@
 SUBDIRS = Apriori Bayesian BIRCH ECLAT ECLAT/util HOP
-SUBDIRS += KMeans PLSA ScalParC SEMPHY SVM-RFE
+SUBDIRS += KMeans PLSA ScalParC
 #SUBDIRS += Utility_Mining/tran_utility Utility_Mining/para_tran_utility
 SUBDIRS += ParETI
 
-TAR_FILES = APR birch Bayesian ETI HOP kmeans PLSA rsearch
-TAR_FILES += ScalParC semphy SNP SVM-RFE
+TAR_FILES = APR.tar.gz birch.tar.gz Bayesian.tar.gz ETI.tar.gz
+TAR_FILES += HOP.tar.gz kmeans.tar.gz PLSA.tar.gz rsearch.tar.gz
+TAR_FILES += ScalParC.tar.gz
 #TAR_FILES += utility_mine
 
 URL = http://cucis.ece.northwestern.edu/projects/DMS/DATASETS/
@@ -36,5 +37,5 @@ SNP:
 
 $(TAR_FILES):
 	mkdir -p datasets
-	ls $(DATASETS_PATH)/$@.tar.gz || (cd $(DATASETS_PATH) && wget $(URL)$@.tar.gz)
-	ls datasets/$@ || tar -xzf $(DATASETS_PATH)/$@.tar.gz -C datasets/
+	ls $(DATASETS_PATH)/$@ || (cd $(DATASETS_PATH) && wget $(URL)$@)
+	ls datasets/${@,%.tar.gz,} || tar -xzf $(DATASETS_PATH)/$@ -C datasets/
