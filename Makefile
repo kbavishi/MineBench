@@ -1,10 +1,7 @@
-SUBDIRS = Apriori Bayesian BIRCH ECLAT ECLAT/util HOP
-SUBDIRS += KMeans PLSA ScalParC
-#SUBDIRS += Utility_Mining/tran_utility Utility_Mining/para_tran_utility
-SUBDIRS += ParETI
+SUBDIRS = Apriori BIRCH ECLAT ECLAT/util HOP
+SUBDIRS += KMeans ScalParC
 
-TAR_FILES = APR.tar.gz birch.tar.gz Bayesian.tar.gz ETI.tar.gz
-TAR_FILES += HOP.tar.gz kmeans.tar.gz PLSA.tar.gz rsearch.tar.gz
+TAR_FILES = APR.tar.gz birch.tar.gz HOP.tar.gz kmeans.tar.gz
 TAR_FILES += ScalParC.tar.gz
 #TAR_FILES += utility_mine
 
@@ -19,7 +16,7 @@ DATASETS_PATH = /proj/netopt-PG0/datasets
 #.PHONY: all $(SUBDIRS) RSEARCH SNP
 #all: $(SUBDIRS) $(TAR_FILES) RSEARCH SNP
 
-all: $(SUBDIRS) $(TAR_FILES) RSEARCH
+all: $(SUBDIRS) $(TAR_FILES)
 
 subdirs: $(SUBDIRS)
 
